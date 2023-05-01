@@ -1,0 +1,29 @@
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  width: 100%;
+  .Element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    .Title {
+      display: flex;
+    }
+    .Button {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 70%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.Required {
+  color: red;
+}
