@@ -25,12 +25,11 @@
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
+
     .preTitle {
       font-size: 1.5rem;
     }
     .title {
-      display: flex;
-
       text-align: left;
 
       margin: 1vh 0;
@@ -38,8 +37,7 @@
       font-size: 3rem;
       font-weight: 700;
       .HighLighted {
-        margin: 0 1vw;
-        color: aqua;
+        color: #ff4d30;
       }
     }
     .subtitle {

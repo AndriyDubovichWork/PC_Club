@@ -1,0 +1,22 @@
+.Choose {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20vh 0;
+
+  .Left,
+  .Right {
+    width: 40%;
+  }
+  .WhyUs {
+    font-weight: 1200;
+  }
+  .Title {
+    font-size: 2.5rem;
+    font-weight: 2000;
+  }
+  .SubTitle {
+    color: gray;
+    font-weight: 100;
+  }
+}

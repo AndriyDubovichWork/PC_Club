@@ -19,8 +19,28 @@ const Header = () => {
       </div>
       <NavBar />
       <div className={style.LoginRegister}>
-        <Button variant='text'>Sing In</Button>
-        <Button variant='contained'>Register</Button>
+        <Button
+          variant='text'
+          sx={{
+            color: '#000',
+            '&:hover': {
+              color: '#ff4d30',
+            },
+          }}
+        >
+          Sing In
+        </Button>
+        <Button
+          variant='contained'
+          sx={{
+            backgroundColor: '#ff4d30',
+            '&:hover': {
+              backgroundColor: '#ff4d30',
+            },
+          }}
+        >
+          Register
+        </Button>
       </div>
     </div>
   );

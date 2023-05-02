@@ -1,0 +1,23 @@
+.Pros {
+  width: 100%;
+  height: 80vh;
+
+  margin: 10vh 0;
+
+  text-align: center;
+
+  .subTitle {
+    font-weight: 500;
+  }
+  .Title {
+    font-weight: 900;
+  }
+  .Content {
+    margin: 10vh 0;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
