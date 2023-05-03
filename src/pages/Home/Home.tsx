@@ -5,6 +5,7 @@ import BookPC from './Components/BookPC/BookPC';
 import Pros from './Components/Pros/Pros';
 import Banner from './Components/Banner/Banner';
 import Choose from './Components/Choose/Choose';
+import Reviews from './Components/Rewievs/Reviews';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Pros />
       <Banner />
       <Choose />
+      <Reviews />
     </div>
   );
 };

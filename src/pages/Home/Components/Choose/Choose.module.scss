@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 20vh 0;
+
+  width: 80%;
+  margin: 20vh auto;
 
   .Left,
   .Right {
     width: 40%;
   }
   .WhyUs {
-    font-weight: 1200;
+    font-weight: 1500;
   }
   .Title {
     font-size: 2.5rem;

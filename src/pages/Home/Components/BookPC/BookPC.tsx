@@ -81,7 +81,11 @@ const CPUs = [
 const BookPC = () => {
   return (
     <Paper
-      sx={{ margin: '5vh auto', width: '92%', padding: '2vw 3vw' }}
+      sx={{
+        margin: '5vh auto',
+        width: '80%',
+        padding: '2vw 3vw',
+      }}
       elevation={3}
     >
       <h1>Book PC</h1>
