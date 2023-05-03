@@ -4,6 +4,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Paper from '@mui/material/Paper';
 
 const FAQ = () => {
   const Questions = [
@@ -32,7 +33,11 @@ const FAQ = () => {
     };
 
   return (
-    <div className={style.FAQ}>
+    <Paper
+      className={style.FAQ}
+      elevation={3}
+      sx={{ backgroundColor: '#f8f8f8' }}
+    >
       <h3>FAQ</h3>
       <h1>Frequently Asked Questions</h1>
       <div className={style.SubTitle}>
@@ -63,7 +68,7 @@ const FAQ = () => {
           </Accordion>
         );
       })}
-    </div>
+    </Paper>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './Header.module.scss';
-import NavBar from '../../Components/NavBar/NavBar';
 import Button from '@mui/material/Button';
+import NavBar from './NavBar/NavBar';
 
 const Header = () => {
   return (
-    <div className={style.Header}>
+    <header className={style.Header}>
       <div className={style.Logo}>
         <img
           src={require('./assets/PCIcon.png')}
@@ -42,7 +42,7 @@ const Header = () => {
           Register
         </Button>
       </div>
-    </div>
+    </header>
   );
 };
 
