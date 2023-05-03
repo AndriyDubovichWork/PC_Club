@@ -6,6 +6,7 @@ import Pros from './Components/Pros/Pros';
 import Banner from './Components/Banner/Banner';
 import Choose from './Components/Choose/Choose';
 import Reviews from './Components/Rewievs/Reviews';
+import FAQ from './Components/FAQ/FAQ';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Banner />
       <Choose />
       <Reviews />
+      <FAQ />
     </div>
   );
 };

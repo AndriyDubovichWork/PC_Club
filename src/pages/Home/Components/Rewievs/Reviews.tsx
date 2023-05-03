@@ -14,7 +14,19 @@ const Reviews = () => {
           with you.
         </h4>
 
-        <Testimonial />
+        <div className={style.Testimonials}>
+          <Testimonial
+            name='Harry Potter'
+            text='I had a great experience at PC Club! The staff was friendly and helpful. I highly recommend this store.'
+            img={require('./assets/harry.jpg')}
+          />
+
+          <Testimonial
+            img={require('./assets/Ron.jpg')}
+            name='Ron Weasley'
+            text="PC Club's great selection and knowledgeable staff make them my go-to for tech needs."
+          />
+        </div>
       </div>
     </div>
   );

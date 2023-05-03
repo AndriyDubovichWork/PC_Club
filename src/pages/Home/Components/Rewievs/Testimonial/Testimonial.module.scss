@@ -1,2 +1,17 @@
-.Testimonial {
+.Text {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.Author {
+  margin-top: 5vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .Img {
+    width: 5vw;
+    border-radius: 50%;
+  }
 }
