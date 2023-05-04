@@ -5,6 +5,26 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 5fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 1vw;
+  grid-row-gap: 0;
+  .SubTitle {
+    margin: 2vh 0;
+  }
+  .HighLighted {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: #000;
+
+    margin: 1vh 0;
+  }
+  .HighLighted:hover {
+    color: #ff4d30;
+  }
+
+  .Input {
+    border: 0;
+  }
 }

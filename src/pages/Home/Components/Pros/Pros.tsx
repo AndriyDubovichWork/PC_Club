@@ -12,7 +12,7 @@ const Pros = () => {
       <div className={style.Content}>
         <ProsElem
           title='Select CPU'
-          subTitle='We offers a big range of CPUs for all your needs. We have the perfect CPU to meet your needs'
+          subTitle='We offer a big range of CPUs for all your needs. We have the perfect CPU to meet your needs'
         >
           <SelectAllIcon sx={{ fontSize: '10rem', color: '#ff4d30' }} />
         </ProsElem>
