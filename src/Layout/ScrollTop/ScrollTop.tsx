@@ -3,7 +3,7 @@ import { Box, Zoom, Fab } from '@mui/material';
 import { KeyboardArrowUp } from '@mui/icons-material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-const ScrollTop = ({ className }: { className: string }) => {
+const ScrollTop = () => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,

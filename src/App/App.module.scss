@@ -1,3 +1,20 @@
 .App {
   width: 100%;
 }
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4d30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #fc644d;
+  border-radius: 20px;
+}

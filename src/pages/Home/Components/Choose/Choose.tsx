@@ -5,8 +5,15 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import PaidIcon from '@mui/icons-material/Paid';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Button from '../../../../Styled/Button/Button';
 
-const Choose = () => {
+const Choose = ({
+  GreetingRef,
+  scrollToElement,
+}: {
+  GreetingRef: React.MutableRefObject<null>;
+  scrollToElement: (ref: React.MutableRefObject<null>) => void;
+}) => {
   return (
     <div className={style.Choose}>
       <div className={style.Left}>
@@ -19,6 +26,11 @@ const Choose = () => {
           the bank. Our deals are designed to give you the ultimate renting
           experience, so don't miss out on your chance to save big.
         </h5>
+        <div style={{ margin: '2vh 0' }}>
+          <Button onClick={() => scrollToElement(GreetingRef)}>
+            Find Details
+          </Button>
+        </div>
       </div>
       <div className={style.Right}>
         <ChooseElem

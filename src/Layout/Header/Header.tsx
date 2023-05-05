@@ -1,7 +1,8 @@
 import React from 'react';
 import style from './Header.module.scss';
-import Button from '@mui/material/Button';
 import NavBar from './NavBar/NavBar';
+import Button from '../../Styled/Button/Button';
+import ButtonMUI from '@mui/material/Button';
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
       </div>
       <NavBar />
       <div className={style.LoginRegister}>
-        <Button
+        <ButtonMUI
           variant='text'
           sx={{
             color: '#000',
@@ -29,18 +30,8 @@ const Header = () => {
           }}
         >
           Sing In
-        </Button>
-        <Button
-          variant='contained'
-          sx={{
-            backgroundColor: '#ff4d30',
-            '&:hover': {
-              backgroundColor: '#ff4d30',
-            },
-          }}
-        >
-          Register
-        </Button>
+        </ButtonMUI>
+        <Button>Register</Button>
       </div>
     </header>
   );

@@ -78,9 +78,10 @@ const CPUs = [
   },
 ];
 
-const BookPC = () => {
+const BookPC = ({ BookRef }: { BookRef: React.MutableRefObject<null> }) => {
   return (
     <Paper
+      ref={BookRef}
       sx={{
         margin: '5vh auto',
         width: '80%',

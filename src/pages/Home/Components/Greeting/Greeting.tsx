@@ -1,17 +1,26 @@
 import React from 'react';
 import style from './Greeting.module.scss';
-import { Button } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Button from '../../../../Styled/Button/Button';
+import ButtonMUI from '@mui/material/Button';
 
-const Greeting = () => {
+const Greeting = ({
+  GreetingRef,
+  BookRef,
+  scrollToElement,
+}: {
+  GreetingRef: React.MutableRefObject<null>;
+  BookRef: React.MutableRefObject<null>;
+  scrollToElement: (ref: React.MutableRefObject<null>) => void;
+}) => {
   return (
     <>
       <img
         src={require('./assets/backGround.png')}
         className={style.BackGround}
       />
-      <div className={style.Greeting}>
+      <div className={style.Greeting} ref={GreetingRef}>
         <div className={style.Content}>
           <h2 className={style.preTitle}>Plan Your day now</h2>
           <div className={style.title}>
@@ -22,20 +31,14 @@ const Greeting = () => {
             Best and cheapest PC Clubs in country
           </p>
           <Button
-            variant='contained'
-            className={style.BookButton}
-            sx={{
-              padding: '2vh 2vw',
-              backgroundColor: '#ff4d30',
-              '&:hover': {
-                backgroundColor: '#ff4d30',
-              },
+            onClick={() => {
+              scrollToElement(BookRef);
             }}
           >
             Book PC
             <CheckCircleIcon sx={{ marginLeft: '1vw' }} />
           </Button>
-          <Button
+          <ButtonMUI
             variant='outlined'
             className={style.MoreButton}
             sx={{
@@ -52,7 +55,7 @@ const Greeting = () => {
           >
             Learn More
             <ArrowForwardIosIcon />
-          </Button>
+          </ButtonMUI>
         </div>
         <img src={require('./assets/pcImg.png')} className={style.PCImage} />
       </div>

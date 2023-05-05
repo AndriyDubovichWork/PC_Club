@@ -5,14 +5,20 @@ import EmailIcon from '@mui/icons-material/Email';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const Fotter = () => {
+const Fotter = ({
+  GreetingRef,
+  scrollToElement,
+}: {
+  GreetingRef: React.MutableRefObject<null>;
+  scrollToElement: (ref: any) => void;
+}) => {
   const headers = [
     <h1>PC CLUB</h1>,
     <h1>COMPANY</h1>,
     <h1>WORKING HOURS</h1>,
     <h1>SUBSCRIPTION</h1>,
   ];
-
+  const companyies = ['New York', 'Careers', 'Mobile', 'Blog', 'How we work'];
   const contents = [
     <div>
       <p className={style.SubTitle}>
@@ -29,11 +35,18 @@ const Fotter = () => {
       </div>
     </div>,
     <div>
-      <p className={style.HighLighted}>New York</p>
-      <p className={style.HighLighted}>Careers</p>
-      <p className={style.HighLighted}>Mobile</p>
-      <p className={style.HighLighted}>Blog</p>
-      <p className={style.HighLighted}>How we work</p>
+      {companyies.map((company) => {
+        return (
+          <p
+            className={style.HighLighted}
+            onClick={() => {
+              scrollToElement(GreetingRef);
+            }}
+          >
+            {company}
+          </p>
+        );
+      })}
     </div>,
     <div>
       <p className={style.HighLighted}>Mon - Fri: 9:00AM - 9:00PM</p>
