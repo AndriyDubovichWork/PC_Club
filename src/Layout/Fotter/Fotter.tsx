@@ -1,17 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './Fotter.module.scss';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { RefContext } from '../../Context/RefContext';
 
-const Fotter = ({
-  GreetingRef,
-  scrollToElement,
-}: {
-  GreetingRef: React.MutableRefObject<null>;
-  scrollToElement: (ref: any) => void;
-}) => {
+const Fotter = () => {
+  const { GreetingRef, scrollToElement } = useContext(RefContext);
+
   const headers = [
     <h1>PC CLUB</h1>,
     <h1>COMPANY</h1>,

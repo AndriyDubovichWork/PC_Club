@@ -8,26 +8,14 @@ import Choose from './Components/Choose/Choose';
 import Reviews from './Components/Rewievs/Reviews';
 import FAQ from './Components/FAQ/FAQ';
 
-const Home = ({
-  GreetingRef,
-  BookRef,
-  scrollToElement,
-}: {
-  BookRef: React.MutableRefObject<null>;
-  GreetingRef: React.MutableRefObject<null>;
-  scrollToElement: (ref: any) => void;
-}) => {
+const Home = () => {
   return (
     <div className={style.Home}>
-      <Greeting
-        GreetingRef={GreetingRef}
-        BookRef={BookRef}
-        scrollToElement={scrollToElement}
-      />
-      <BookPC BookRef={BookRef} />
+      <Greeting />
+      <BookPC />
       <Pros />
       <Banner />
-      <Choose GreetingRef={GreetingRef} scrollToElement={scrollToElement} />
+      <Choose />
       <Reviews />
       <FAQ />
     </div>

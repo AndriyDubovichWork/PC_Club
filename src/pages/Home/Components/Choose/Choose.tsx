@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './Choose.module.scss';
 import ChooseElem from './ChooseElem/ChooseElem';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
@@ -6,14 +6,10 @@ import PaidIcon from '@mui/icons-material/Paid';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Button from '../../../../Styled/Button/Button';
+import { RefContext } from '../../../../Context/RefContext';
 
-const Choose = ({
-  GreetingRef,
-  scrollToElement,
-}: {
-  GreetingRef: React.MutableRefObject<null>;
-  scrollToElement: (ref: React.MutableRefObject<null>) => void;
-}) => {
+const Choose = () => {
+  const { GreetingRef, scrollToElement } = useContext(RefContext);
   return (
     <div className={style.Choose}>
       <div className={style.Left}>

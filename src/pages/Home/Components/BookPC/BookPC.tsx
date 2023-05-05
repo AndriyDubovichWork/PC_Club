@@ -7,11 +7,12 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SelectAllIcon from '@mui/icons-material/SelectAll';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import React from 'react';
+import React, { useContext } from 'react';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
 import style from './BookPC.module.scss';
+import { RefContext } from '../../../../Context/RefContext';
 
 const Required = ({ text }: { text: string }) => {
   return (
@@ -78,7 +79,8 @@ const CPUs = [
   },
 ];
 
-const BookPC = ({ BookRef }: { BookRef: React.MutableRefObject<null> }) => {
+const BookPC = () => {
+  const { BookRef } = useContext(RefContext);
   return (
     <Paper
       ref={BookRef}

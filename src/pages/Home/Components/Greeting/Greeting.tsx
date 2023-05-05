@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './Greeting.module.scss';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Button from '../../../../Styled/Button/Button';
 import ButtonMUI from '@mui/material/Button';
+import { RefContext } from '../../../../Context/RefContext';
 
-const Greeting = ({
-  GreetingRef,
-  BookRef,
-  scrollToElement,
-}: {
-  GreetingRef: React.MutableRefObject<null>;
-  BookRef: React.MutableRefObject<null>;
-  scrollToElement: (ref: React.MutableRefObject<null>) => void;
-}) => {
+const Greeting = () => {
+  const { GreetingRef, BookRef, scrollToElement } = useContext(RefContext);
   return (
     <>
       <img
