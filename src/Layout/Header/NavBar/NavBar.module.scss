@@ -4,8 +4,14 @@
   justify-content: space-between;
   align-items: center;
 
-  a {
+  .Link {
     margin: 0 1vw;
     text-transform: uppercase;
+    text-decoration: none;
+
+    color: #000;
+  }
+  .Link:hover {
+    color: #ff4d30;
   }
 }

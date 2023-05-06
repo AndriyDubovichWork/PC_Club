@@ -177,7 +177,7 @@ const BookPC = () => {
               padding: '2vh 2vw',
             }}
           >
-            Search
+            Book
           </Button>
         </div>
       </div>

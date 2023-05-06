@@ -9,7 +9,7 @@ import Button from '../../../../Styled/Button/Button';
 import { RefContext } from '../../../../Context/RefContext';
 
 const Choose = () => {
-  const { GreetingRef, scrollToElement } = useContext(RefContext);
+  const { HeaderRef, scrollToElement } = useContext(RefContext);
   return (
     <div className={style.Choose}>
       <div className={style.Left}>
@@ -23,7 +23,7 @@ const Choose = () => {
           experience, so don't miss out on your chance to save big.
         </h5>
         <div style={{ margin: '2vh 0' }}>
-          <Button onClick={() => scrollToElement(GreetingRef)}>
+          <Button onClick={() => scrollToElement(HeaderRef)}>
             Find Details
           </Button>
         </div>

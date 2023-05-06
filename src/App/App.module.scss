@@ -11,10 +11,9 @@
 
 ::-webkit-scrollbar-thumb {
   background: #ff4d30;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  cursor: pointer;
   background: #fc644d;
-  border-radius: 20px;
 }

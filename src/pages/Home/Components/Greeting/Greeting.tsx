@@ -7,14 +7,14 @@ import ButtonMUI from '@mui/material/Button';
 import { RefContext } from '../../../../Context/RefContext';
 
 const Greeting = () => {
-  const { GreetingRef, BookRef, scrollToElement } = useContext(RefContext);
+  const { BookRef, scrollToElement } = useContext(RefContext);
   return (
     <>
       <img
         src={require('./assets/backGround.png')}
         className={style.BackGround}
       />
-      <div className={style.Greeting} ref={GreetingRef}>
+      <div className={style.Greeting}>
         <div className={style.Content}>
           <h2 className={style.preTitle}>Plan Your day now</h2>
           <div className={style.title}>

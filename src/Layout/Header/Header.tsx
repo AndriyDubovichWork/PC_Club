@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './Header.module.scss';
 import NavBar from './NavBar/NavBar';
 import Button from '../../Styled/Button/Button';
 import ButtonMUI from '@mui/material/Button';
+import { RefContext } from '../../Context/RefContext';
 
 const Header = () => {
+  const { HeaderRef } = useContext(RefContext);
   return (
-    <header className={style.Header}>
+    <header className={style.Header} ref={HeaderRef}>
       <div className={style.Logo}>
         <img
           src={require('./assets/PCIcon.png')}

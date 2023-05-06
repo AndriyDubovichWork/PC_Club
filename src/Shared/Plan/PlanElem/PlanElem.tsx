@@ -1,15 +1,15 @@
 import React from 'react';
-import style from './ProsElem.module.scss';
+import style from './PlanElem.module.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
-type ProsElemPropsT = {
+type PlanElemPropsT = {
   title: string;
   subTitle: string;
   children: ReactJSXElement;
 };
 
-const ProsElem: React.FC<ProsElemPropsT> = ({ title, subTitle, children }) => {
+const PlanElem: React.FC<PlanElemPropsT> = ({ title, subTitle, children }) => {
   return (
-    <div className={style.ProsElem}>
+    <div className={style.PlanElem}>
       {children}
       <h1>{title}</h1>
       <h3 className={style.subTitle}>{subTitle}</h3>
@@ -17,4 +17,4 @@ const ProsElem: React.FC<ProsElemPropsT> = ({ title, subTitle, children }) => {
   );
 };
 
-export default ProsElem;
+export default PlanElem;

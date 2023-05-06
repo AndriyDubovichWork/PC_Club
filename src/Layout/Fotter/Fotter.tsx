@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import { RefContext } from '../../Context/RefContext';
 
 const Fotter = () => {
-  const { GreetingRef, scrollToElement } = useContext(RefContext);
+  const { HeaderRef, scrollToElement } = useContext(RefContext);
 
   const headers = [
     <h1>PC CLUB</h1>,
@@ -35,9 +35,10 @@ const Fotter = () => {
       {companyies.map((company) => {
         return (
           <p
+            key={company}
             className={style.HighLighted}
             onClick={() => {
-              scrollToElement(GreetingRef);
+              scrollToElement(HeaderRef);
             }}
           >
             {company}

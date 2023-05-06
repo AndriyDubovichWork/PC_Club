@@ -47,6 +47,7 @@ const FAQ = () => {
       {Questions.map((question, id) => {
         return (
           <Accordion
+            key={question.details}
             expanded={expanded === 'panel' + (id + 1)}
             onChange={handleChange('panel' + (id + 1))}
           >
