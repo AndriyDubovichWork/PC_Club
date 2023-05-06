@@ -12,6 +12,8 @@ const SubHeader = ({ title }: SubHeaderPropsT) => {
 
   return (
     <>
+      <img className={style.backGroundPC} />
+
       <h1 className={style.Title}>{title}</h1>
 
       <Breadcrumbs aria-label='breadcrumb'>
