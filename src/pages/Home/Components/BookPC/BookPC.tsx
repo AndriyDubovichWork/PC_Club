@@ -1,19 +1,30 @@
 import React, { useContext, useState } from 'react';
-import { Button, Paper } from '@mui/material';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import SelectAllIcon from '@mui/icons-material/SelectAll';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
+import { MenuItem, Paper } from '@mui/material';
 
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
+import TextField from '@mui/material/TextField';
 import style from './BookPC.module.scss';
 import { RefContext } from '../../../../Context/RefContext';
 import BookDialog from './BookDialog/BookDialog';
+import { Formik, Form, Field } from 'formik';
+import BookSchema from './Validation/BookPCValidation';
+import dayjs from 'dayjs';
+import SelectAllIcon from '@mui/icons-material/SelectAll';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import MUIDatePicker from './MUIDatePicker/MUIDatePicker';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  DatePicker,
+  LocalizationProvider,
+  TimePicker,
+} from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import enGB from 'date-fns/locale/en-GB';
+import enLocale from 'date-fns/locale/en-US';
+import Button from '../../../../Styled/Button/Button';
+import DropDown from '../../../../Styled/DropDown/DropDown';
 
 const Required = ({ text }: { text: string }) => {
   return (
@@ -23,7 +34,7 @@ const Required = ({ text }: { text: string }) => {
     </>
   );
 };
-const VideoCards = [
+const GPUs = [
   {
     label: 'Rtx 4090',
     value: 'Rtx 4090',
@@ -84,6 +95,15 @@ const BookPC = () => {
   const { BookRef } = useContext(RefContext);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const initialValues = {
+    date: dayjs(Date.now()),
+    GPU: GPUs[0].value,
+    CPU: CPUs[0].value,
+    From: dayjs(Date.now()),
+    Until: dayjs(Date.now()),
+  };
+
   return (
     <>
       <Paper
@@ -96,98 +116,76 @@ const BookPC = () => {
         elevation={3}
       >
         <h1>Book PC</h1>
-        <div className={style.Grid}>
-          <div className={style.Element}>
-            <h3 className={style.Title}>
-              <CalendarMonthIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
-              <Required text={'Select Date'} />
-            </h3>
 
+        <Formik
+          initialValues={initialValues}
+          onSubmit={(data) => {
+            console.log(data);
+          }}
+          validationSchema={BookSchema.validate}
+        >
+          <Form
+            className={style.Grid}
+            onSubmit={(data) => {
+              console.log(data);
+            }}
+          >
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={['DatePicker']}>
-                <DatePicker sx={{ width: '100%' }} label='Select date' />
-              </DemoContainer>
-            </LocalizationProvider>
-          </div>
-          <div className={style.Element}>
-            <h3 className={style.Title}>
-              <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
-              <Required text={'Video Card'} />
-            </h3>
+              <div className={style.Element}>
+                <h3 className={style.Title}>
+                  <CalendarMonthIcon
+                    sx={{ color: 'red', paddingRight: '0.5vw' }}
+                  />
+                  <Required text={'Select Date'} />
+                </h3>
+                <Field name='date' component={DatePicker} />
+              </div>
+              <div className={style.Element}>
+                <h3 className={style.Title}>
+                  <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
+                  <Required text={'GPU'} />
+                </h3>
+                <Field name='GPU' component={DropDown} Array={GPUs} />
+              </div>
+              <div className={style.Element}>
+                <h3 className={style.Title}>
+                  <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
+                  <Required text={'CPU'} />
+                </h3>
 
-            <TextField
-              select
-              label='Video Card'
-              defaultValue={VideoCards[0].value}
-              sx={{ width: '100%' }}
-            >
-              {VideoCards.map((VideoCard) => (
-                <MenuItem key={VideoCard.value} value={VideoCard.value}>
-                  {VideoCard.label}
-                </MenuItem>
-              ))}
-            </TextField>
-          </div>
-          <div className={style.Element}>
-            <h3 className={style.Title}>
-              <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
-              <Required text={'CPU'} />
-            </h3>
-
-            <TextField
-              select
-              label='CPU'
-              defaultValue={CPUs[0].value}
-              sx={{ width: '100%' }}
-            >
-              {CPUs.map((CPU) => (
-                <MenuItem key={CPU.value} value={CPU.value}>
-                  {CPU.label}
-                </MenuItem>
-              ))}
-            </TextField>
-          </div>
-          <div className={style.Element}>
-            <h3 className={style.Title}>
-              <AccessTimeIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
-              <Required text={'From'} />
-            </h3>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={['TimePicker']}>
-                <TimePicker label='From' sx={{ width: '100%' }} />
-              </DemoContainer>
+                <Field name='CPU' component={DropDown} Array={CPUs} />
+              </div>
+              <div className={style.Element}>
+                <h3 className={style.Title}>
+                  <AccessTimeIcon
+                    sx={{ color: 'red', paddingRight: '0.5vw' }}
+                  />
+                  <Required text={'From'} />
+                </h3>
+                <Field name='From' component={TimePicker} />
+              </div>
+              <div className={style.Element}>
+                <h3 className={style.Title}>
+                  <AccessTimeIcon
+                    sx={{ color: 'red', paddingRight: '0.5vw' }}
+                  />
+                  <Required text={'Until'} />
+                </h3>
+                <Field name='Until' component={TimePicker} />
+              </div>
+              <div className={style.Element}>
+                <Button
+                  onClick={() => {
+                    setIsDialogOpen(true);
+                  }}
+                  className={style.Button}
+                >
+                  Book
+                </Button>
+              </div>
             </LocalizationProvider>
-          </div>
-          <div className={style.Element}>
-            <h3 className={style.Title}>
-              <AccessTimeIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
-              <Required text={'Until'} />
-            </h3>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={['TimePicker']}>
-                <TimePicker label='Until' sx={{ width: '100%' }} />
-              </DemoContainer>
-            </LocalizationProvider>
-          </div>
-          <div className={style.Element}>
-            <Button
-              onClick={() => {
-                setIsDialogOpen(true);
-              }}
-              variant='contained'
-              className={style.Button}
-              sx={{
-                backgroundColor: '#ff4d30',
-                '&:hover': {
-                  backgroundColor: '#ff4d30',
-                },
-                padding: '2vh 2vw',
-              }}
-            >
-              Book
-            </Button>
-          </div>
-        </div>
+          </Form>
+        </Formik>
       </Paper>
 
       <BookDialog

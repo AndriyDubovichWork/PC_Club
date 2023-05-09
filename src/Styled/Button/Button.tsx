@@ -3,13 +3,20 @@ import ButtonC from '@mui/material/Button';
 
 type ButtonT = {
   fullWidth?: boolean;
+  className?: string;
   onClick?: () => void;
   children: string | any;
 };
 
-const Button = ({ fullWidth = false, children, onClick }: ButtonT) => {
+const Button = ({
+  fullWidth = false,
+  children,
+  onClick,
+  className,
+}: ButtonT) => {
   return (
     <ButtonC
+      className={className}
       onClick={onClick}
       variant='contained'
       sx={{
