@@ -3,7 +3,6 @@ import { MenuItem, Paper } from '@mui/material';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
-import TextField from '@mui/material/TextField';
 import style from './BookPC.module.scss';
 import { RefContext } from '../../../../Context/RefContext';
 import BookDialog from './BookDialog/BookDialog';
@@ -12,20 +11,20 @@ import BookSchema from './Validation/BookPCValidation';
 import dayjs from 'dayjs';
 import SelectAllIcon from '@mui/icons-material/SelectAll';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import MUIDatePicker from './MUIDatePicker/MUIDatePicker';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+import { FieldProps, FormikProps } from 'formik';
+
 import {
   DatePicker,
   LocalizationProvider,
   TimePicker,
 } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import enGB from 'date-fns/locale/en-GB';
-import enLocale from 'date-fns/locale/en-US';
-import Button from '../../../../Styled/Button/Button';
-import DropDown from '../../../../Styled/DropDown/DropDown';
 
+import Button from '../../../../Styled/Button/Button';
+import { Select } from 'formik-mui';
+interface TimePickerFieldProps extends FieldProps {
+  form: FormikProps<any>;
+}
 const Required = ({ text }: { text: string }) => {
   return (
     <>
@@ -119,17 +118,12 @@ const BookPC = () => {
 
         <Formik
           initialValues={initialValues}
-          onSubmit={(data) => {
-            console.log(data);
+          onSubmit={(values) => {
+            console.log(values);
           }}
-          validationSchema={BookSchema.validate}
+          validationSchema={BookSchema}
         >
-          <Form
-            className={style.Grid}
-            onSubmit={(data) => {
-              console.log(data);
-            }}
-          >
+          <Form className={style.Grid}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <div className={style.Element}>
                 <h3 className={style.Title}>
@@ -138,22 +132,42 @@ const BookPC = () => {
                   />
                   <Required text={'Select Date'} />
                 </h3>
-                <Field name='date' component={DatePicker} />
+
+                <Field name='date'>
+                  {({ field, form }: TimePickerFieldProps) => (
+                    <DatePicker
+                      {...field}
+                      value={field.value || null}
+                      onChange={(date) => form.setFieldValue(field.name, date)}
+                    />
+                  )}
+                </Field>
               </div>
               <div className={style.Element}>
                 <h3 className={style.Title}>
                   <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
                   <Required text={'GPU'} />
                 </h3>
-                <Field name='GPU' component={DropDown} Array={GPUs} />
+                <Field name='GPU' id='GPU' component={Select}>
+                  {GPUs.map((GPU) => (
+                    <MenuItem key={GPU.value} value={GPU.value}>
+                      {GPU.label}
+                    </MenuItem>
+                  ))}
+                </Field>
               </div>
               <div className={style.Element}>
                 <h3 className={style.Title}>
                   <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
                   <Required text={'CPU'} />
                 </h3>
-
-                <Field name='CPU' component={DropDown} Array={CPUs} />
+                <Field name='CPU' id='CPU' component={Select}>
+                  {CPUs.map((CPU) => (
+                    <MenuItem key={CPU.value} value={CPU.value}>
+                      {CPU.label}
+                    </MenuItem>
+                  ))}
+                </Field>
               </div>
               <div className={style.Element}>
                 <h3 className={style.Title}>
@@ -162,7 +176,16 @@ const BookPC = () => {
                   />
                   <Required text={'From'} />
                 </h3>
-                <Field name='From' component={TimePicker} />
+
+                <Field name='From'>
+                  {({ field, form }: TimePickerFieldProps) => (
+                    <TimePicker
+                      {...field}
+                      value={field.value || null}
+                      onChange={(date) => form.setFieldValue(field.name, date)}
+                    />
+                  )}
+                </Field>
               </div>
               <div className={style.Element}>
                 <h3 className={style.Title}>
@@ -171,14 +194,25 @@ const BookPC = () => {
                   />
                   <Required text={'Until'} />
                 </h3>
-                <Field name='Until' component={TimePicker} />
+                <Field name='Until'>
+                  {({ field, form }: TimePickerFieldProps) => (
+                    <TimePicker
+                      {...field}
+                      value={field.value || null}
+                      onChange={(date) => form.setFieldValue(field.name, date)}
+                    />
+                  )}
+                </Field>
               </div>
               <div className={style.Element}>
                 <Button
-                  onClick={() => {
+                  onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                    // e.preventDefault();
+
                     setIsDialogOpen(true);
                   }}
                   className={style.Button}
+                  type='submit'
                 >
                   Book
                 </Button>

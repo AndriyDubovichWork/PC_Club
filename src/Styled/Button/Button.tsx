@@ -4,7 +4,8 @@ import ButtonC from '@mui/material/Button';
 type ButtonT = {
   fullWidth?: boolean;
   className?: string;
-  onClick?: () => void;
+  type?: 'submit';
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: string | any;
 };
 
@@ -12,10 +13,12 @@ const Button = ({
   fullWidth = false,
   children,
   onClick,
+  type,
   className,
 }: ButtonT) => {
   return (
     <ButtonC
+      type={type}
       className={className}
       onClick={onClick}
       variant='contained'
