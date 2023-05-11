@@ -22,73 +22,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 import Button from '../../../../Styled/Button/Button';
 import { Select } from 'formik-mui';
+import { CPUs, GPUs } from './PCParts/PCParts';
+import Required from '../../../../Styled/Required/Required';
 interface TimePickerFieldProps extends FieldProps {
   form: FormikProps<any>;
 }
-const Required = ({ text }: { text: string }) => {
-  return (
-    <>
-      <p>{text}</p>
-      <p className={style.Required}>*</p>
-    </>
-  );
-};
-const GPUs = [
-  {
-    label: 'Rtx 4090',
-    value: 'Rtx 4090',
-  },
-  {
-    label: 'Rtx 4080',
-    value: 'Rtx 4080',
-  },
-  {
-    label: 'Rtx 4070',
-    value: 'Rtx 4070',
-  },
-  {
-    label: 'Rtx 3090',
-    value: 'Rtx 3090',
-  },
-  {
-    label: 'Rtx 3080',
-    value: 'Rtx 3080',
-  },
-  {
-    label: 'Gtx 1080',
-    value: 'Gtx 1080',
-  },
-  {
-    label: 'Gtx 1660ti',
-    value: 'Gtx 1660ti',
-  },
-];
-const CPUs = [
-  {
-    label: 'i9 13th 13900k',
-    value: 'i9 13th 13900k',
-  },
-  {
-    label: 'i7 13th 13700k',
-    value: 'i7 13th 13700k',
-  },
-  {
-    label: 'i5 13th 13500',
-    value: 'i5 13th 13500',
-  },
-  {
-    label: 'i9 12th 12900k',
-    value: 'i9 12th 12900k',
-  },
-  {
-    label: 'i7 12th 12700k',
-    value: 'i7 12th 12700k',
-  },
-  {
-    label: 'i5 12th 12600k',
-    value: 'i5 12th 12600k',
-  },
-];
 
 const BookPC = () => {
   const { BookRef } = useContext(RefContext);
@@ -137,6 +75,7 @@ const BookPC = () => {
                   {({ field, form }: TimePickerFieldProps) => (
                     <DatePicker
                       {...field}
+                      format='DD/MM/YYYY'
                       value={field.value || null}
                       onChange={(date) => form.setFieldValue(field.name, date)}
                     />
@@ -148,7 +87,7 @@ const BookPC = () => {
                   <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
                   <Required text={'GPU'} />
                 </h3>
-                <Field name='GPU' id='GPU' component={Select}>
+                <Field name='GPU' component={Select} disabled={false}>
                   {GPUs.map((GPU) => (
                     <MenuItem key={GPU.value} value={GPU.value}>
                       {GPU.label}
@@ -161,7 +100,7 @@ const BookPC = () => {
                   <SelectAllIcon sx={{ color: 'red', paddingRight: '0.5vw' }} />
                   <Required text={'CPU'} />
                 </h3>
-                <Field name='CPU' id='CPU' component={Select}>
+                <Field name='CPU' id='CPU' component={Select} disabled={false}>
                   {CPUs.map((CPU) => (
                     <MenuItem key={CPU.value} value={CPU.value}>
                       {CPU.label}
