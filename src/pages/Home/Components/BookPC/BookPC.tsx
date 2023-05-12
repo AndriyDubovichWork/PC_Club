@@ -24,6 +24,12 @@ import Button from '../../../../Styled/Button/Button';
 import { Select } from 'formik-mui';
 import { CPUs, GPUs } from './PCParts/PCParts';
 import Required from '../../../../Styled/Required/Required';
+
+require('dayjs/locale/en');
+const localizedFormat = require('dayjs/plugin/localizedFormat');
+
+dayjs.extend(localizedFormat);
+
 interface TimePickerFieldProps extends FieldProps {
   form: FormikProps<any>;
 }
@@ -32,6 +38,14 @@ const BookPC = () => {
   const { BookRef } = useContext(RefContext);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const [bookData, setBookData] = useState({
+    date: '12/05/2023',
+    GPU: GPUs[0].value,
+    CPU: CPUs[0].value,
+    From: '12:50',
+    Until: '15:50',
+  });
 
   const initialValues = {
     date: dayjs(Date.now()),
@@ -57,7 +71,16 @@ const BookPC = () => {
         <Formik
           initialValues={initialValues}
           onSubmit={(values) => {
-            console.log(values);
+            let date = values.date.format('DD-MM-YYYY');
+            let From = values.From.format('HH:mm');
+            let Until = values.Until.format('HH:mm');
+            const copy = {
+              ...values,
+              date,
+              From,
+              Until,
+            };
+            setBookData(copy);
           }}
           validationSchema={BookSchema}
         >
@@ -164,6 +187,7 @@ const BookPC = () => {
       <BookDialog
         isDialogOpen={isDialogOpen}
         setIsDialogOpen={setIsDialogOpen}
+        bookData={bookData}
       />
     </>
   );

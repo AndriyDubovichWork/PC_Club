@@ -7,6 +7,8 @@ import ScrollTop from '../Layout/ScrollTop/ScrollTop';
 import { RefContext } from '../Context/RefContext';
 import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom';
 import About from '../pages/About/About';
+import { CPUs, GPUs } from '../pages/Home/Components/BookPC/PCParts/PCParts';
+import dayjs from 'dayjs';
 
 const router = createBrowserRouter([
   {

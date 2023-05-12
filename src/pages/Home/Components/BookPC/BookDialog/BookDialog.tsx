@@ -3,12 +3,24 @@ import React from 'react';
 import style from './BookDialog.module.scss';
 import Button from '../../../../../Styled/Button/Button';
 import PresonalInformation from './PresonalInformation/PresonalInformation';
+import dayjs from 'dayjs';
 type BookDialogPropsT = {
+  bookData: {
+    date: string;
+    GPU: string;
+    CPU: string;
+    From: string;
+    Until: string;
+  };
   isDialogOpen: boolean;
   setIsDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const BookDialog = ({ isDialogOpen, setIsDialogOpen }: BookDialogPropsT) => {
+const BookDialog = ({
+  bookData,
+  isDialogOpen,
+  setIsDialogOpen,
+}: BookDialogPropsT) => {
   return (
     <Dialog
       onClose={() => setIsDialogOpen(false)}
@@ -18,7 +30,19 @@ const BookDialog = ({ isDialogOpen, setIsDialogOpen }: BookDialogPropsT) => {
       fullWidth
     >
       <DialogContent>
-        <Button>1234</Button>
+        <h1 className={style.Title}>Info About Booking</h1>
+
+        <div className={style.Details}>
+          {Object.keys(bookData).map((BookKey: string, id: number) => {
+            const key = BookKey as keyof typeof bookData;
+            return (
+              <div key={bookData[key] + id} className={style.Element}>
+                <span className={style.Key}>{key}:</span>
+                <span className={style.Data}>{bookData[key]}</span>
+              </div>
+            );
+          })}
+        </div>
         <PresonalInformation />
       </DialogContent>
     </Dialog>
