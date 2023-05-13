@@ -14,12 +14,14 @@ type BookDialogPropsT = {
   };
   isDialogOpen: boolean;
   setIsDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsSnackbarOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const BookDialog = ({
   bookData,
   isDialogOpen,
   setIsDialogOpen,
+  setIsSnackbarOpen,
 }: BookDialogPropsT) => {
   return (
     <Dialog
@@ -43,7 +45,10 @@ const BookDialog = ({
             );
           })}
         </div>
-        <PresonalInformation />
+        <PresonalInformation
+          setIsDialogOpen={setIsDialogOpen}
+          setIsSnackbarOpen={setIsSnackbarOpen}
+        />
       </DialogContent>
     </Dialog>
   );

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { MenuItem, Paper } from '@mui/material';
+import { Alert, MenuItem, Paper, Snackbar } from '@mui/material';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
@@ -38,6 +38,7 @@ const BookPC = () => {
   const { BookRef } = useContext(RefContext);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
 
   const [bookData, setBookData] = useState({
     date: '12/05/2023',
@@ -187,8 +188,22 @@ const BookPC = () => {
       <BookDialog
         isDialogOpen={isDialogOpen}
         setIsDialogOpen={setIsDialogOpen}
+        setIsSnackbarOpen={setIsSnackbarOpen}
         bookData={bookData}
       />
+      <Snackbar
+        open={isSnackbarOpen}
+        autoHideDuration={6000}
+        onClose={() => setIsSnackbarOpen(false)}
+      >
+        <Alert
+          onClose={() => setIsSnackbarOpen(false)}
+          severity='success'
+          sx={{ width: '100%' }}
+        >
+          Successfully reserved
+        </Alert>
+      </Snackbar>
     </>
   );
 };

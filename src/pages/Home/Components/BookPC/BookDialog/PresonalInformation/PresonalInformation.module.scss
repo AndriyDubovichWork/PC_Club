@@ -5,4 +5,17 @@
     color: #ff4d30;
     font-family: 'Lato', sans-serif;
   }
+  .Elems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+  }
+  .Button {
+    display: flex;
+    align-self: flex-end;
+    justify-self: end;
+    height: fit-content;
+  }
 }
