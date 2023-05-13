@@ -1,7 +1,6 @@
 import { Dialog, DialogContent } from '@mui/material';
 import React from 'react';
 import style from './BookDialog.module.scss';
-import Button from '../../../../../Styled/Button/Button';
 import PresonalInformation from './PresonalInformation/PresonalInformation';
 import dayjs from 'dayjs';
 type BookDialogPropsT = {

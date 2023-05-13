@@ -14,16 +14,18 @@ const SubHeader = ({ title }: SubHeaderPropsT) => {
     <>
       <img className={style.backGroundPC} />
 
-      <h1 className={style.Title}>{title}</h1>
+      <div className={style.Text}>
+        <h1 className={style.Title}>{title}</h1>
 
-      <Breadcrumbs aria-label='breadcrumb'>
-        <NavLink to='/' className={style.Link}>
-          Home
-        </NavLink>
-        <NavLink to={location.pathname} className={style.Link}>
-          {title}
-        </NavLink>
-      </Breadcrumbs>
+        <Breadcrumbs aria-label='breadcrumb'>
+          <NavLink to='/' className={style.Link}>
+            Home
+          </NavLink>
+          <NavLink to={location.pathname} className={style.Link}>
+            {title}
+          </NavLink>
+        </Breadcrumbs>
+      </div>
     </>
   );
 };

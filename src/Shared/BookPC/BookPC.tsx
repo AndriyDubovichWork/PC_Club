@@ -4,7 +4,6 @@ import { Alert, MenuItem, Paper, Snackbar } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import style from './BookPC.module.scss';
-import { RefContext } from '../../../../Context/RefContext';
 import BookDialog from './BookDialog/BookDialog';
 import { Formik, Form, Field } from 'formik';
 import BookSchema from './Validation/BookPCValidation';
@@ -20,10 +19,11 @@ import {
 } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
-import Button from '../../../../Styled/Button/Button';
 import { Select } from 'formik-mui';
 import { CPUs, GPUs } from './PCParts/PCParts';
-import Required from '../../../../Styled/Required/Required';
+import { RefContext } from '../../Context/RefContext';
+import Required from '../../Styled/Required/Required';
+import Button from '../../Styled/Button/Button';
 
 require('dayjs/locale/en');
 const localizedFormat = require('dayjs/plugin/localizedFormat');

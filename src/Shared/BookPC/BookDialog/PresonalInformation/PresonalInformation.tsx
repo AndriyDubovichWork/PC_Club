@@ -17,8 +17,8 @@ import dayjs from 'dayjs';
 
 import { TextField } from 'formik-mui';
 import PresonalInformationSchema from './Validation/PresonalInformationSchema';
-import Required from '../../../../../../Styled/Required/Required';
-import Button from '../../../../../../Styled/Button/Button';
+import Required from '../../../../Styled/Required/Required';
+import Button from '../../../../Styled/Button/Button';
 
 require('dayjs/locale/en');
 const localizedFormat = require('dayjs/plugin/localizedFormat');

@@ -2,18 +2,23 @@ import React, { useContext } from 'react';
 import style from './Greeting.module.scss';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Button from '../../../../Styled/Button/Button';
+import Button from '../../Styled/Button/Button';
 import ButtonMUI from '@mui/material/Button';
-import { RefContext } from '../../../../Context/RefContext';
+import { RefContext } from '../../Context/RefContext';
+import { useLocation } from 'react-router-dom';
 
 const Greeting = () => {
   const { BookRef, scrollToElement } = useContext(RefContext);
+
+  const location = useLocation();
   return (
     <>
-      <img
-        src={require('./assets/backGround.png')}
-        className={style.BackGround}
-      />
+      {location.pathname === '/' && (
+        <img
+          src={require('./assets/backGround.png')}
+          className={style.BackGround}
+        />
+      )}
       <div className={style.Greeting}>
         <div className={style.Content}>
           <h2 className={style.preTitle}>Plan Your day now</h2>

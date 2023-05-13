@@ -7,8 +7,11 @@ import ScrollTop from '../Layout/ScrollTop/ScrollTop';
 import { RefContext } from '../Context/RefContext';
 import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom';
 import About from '../pages/About/About';
-import { CPUs, GPUs } from '../pages/Home/Components/BookPC/PCParts/PCParts';
 import dayjs from 'dayjs';
+import Computers from '../pages/Computers/Computers';
+import Reviews from '../pages/Reviews/Reviews';
+import Team from '../pages/Team/Team';
+import Contact from '../pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,42 @@ const router = createBrowserRouter([
       <>
         <Header />
         <About />
+      </>
+    ),
+  },
+  {
+    path: '/computers',
+    element: (
+      <>
+        <Header />
+        <Computers />
+      </>
+    ),
+  },
+  {
+    path: '/reviews',
+    element: (
+      <>
+        <Header />
+        <Reviews />
+      </>
+    ),
+  },
+  {
+    path: '/team',
+    element: (
+      <>
+        <Header />
+        <Team />
+      </>
+    ),
+  },
+  {
+    path: '/contact',
+    element: (
+      <>
+        <Header />
+        <Contact />
       </>
     ),
   },
