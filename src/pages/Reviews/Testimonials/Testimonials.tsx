@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Reviews.module.scss';
 import Testimonial from './Testimonial/Testimonial';
-const Reviews = () => {
+const Testimonials = () => {
   return (
     <div className={style.Reviews}>
       <div className={style.Content}>
@@ -32,4 +32,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Testimonials;

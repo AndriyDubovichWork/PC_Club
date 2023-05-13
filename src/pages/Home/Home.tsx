@@ -4,9 +4,10 @@ import Greeting from '../../Shared/Greeting/Greeting';
 import Plan from '../../Shared/Plan/Plan';
 import Banner from './Components/Banner/Banner';
 import Choose from './Components/Choose/Choose';
-import Reviews from './Components/Rewievs/Reviews';
+
 import FAQ from './Components/FAQ/FAQ';
 import BookPC from '../../Shared/BookPC/BookPC';
+import Testimonials from '../Reviews/Testimonials/Testimonials';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       <Plan />
       <Banner />
       <Choose />
-      <Reviews />
+      <Testimonials />
       <FAQ />
     </main>
   );
