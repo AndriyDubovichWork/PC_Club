@@ -1,4 +1,45 @@
 .Contact {
   width: 80%;
   margin: 0 auto;
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    .column {
+      margin: 10vh 0;
+
+      width: 50%;
+      .header {
+        font-size: 2.7rem;
+        font-weight: 700;
+      }
+      .subHeader {
+        width: 60%;
+
+        margin: 2vh 0;
+
+        color: #706f7b;
+
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .highLighted {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        color: #000;
+
+        margin: 1vh 0;
+      }
+      .highLighted:hover {
+        color: #ff4d30;
+      }
+
+      .field {
+        margin: 2vh 0;
+      }
+    }
+  }
 }

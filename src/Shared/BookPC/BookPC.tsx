@@ -24,6 +24,7 @@ import { CPUs, GPUs } from './PCParts/PCParts';
 import { RefContext } from '../../Context/RefContext';
 import Required from '../../Styled/Required/Required';
 import Button from '../../Styled/Button/Button';
+import PopUpMessage from '../../Styled/PopUpMessage/PopUpMessage';
 
 require('dayjs/locale/en');
 const localizedFormat = require('dayjs/plugin/localizedFormat');
@@ -191,19 +192,11 @@ const BookPC = () => {
         setIsSnackbarOpen={setIsSnackbarOpen}
         bookData={bookData}
       />
-      <Snackbar
-        open={isSnackbarOpen}
-        autoHideDuration={6000}
-        onClose={() => setIsSnackbarOpen(false)}
-      >
-        <Alert
-          onClose={() => setIsSnackbarOpen(false)}
-          severity='success'
-          sx={{ width: '100%' }}
-        >
-          Successfully reserved
-        </Alert>
-      </Snackbar>
+      <PopUpMessage
+        isSnackbarOpen={isSnackbarOpen}
+        setIsSnackbarOpen={setIsSnackbarOpen}
+        text='Successfully reserved'
+      />
     </>
   );
 };

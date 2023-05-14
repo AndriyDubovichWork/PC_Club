@@ -80,14 +80,14 @@ const Fotter = () => {
 
   return (
     <>
-      <div className={style.Fotter}>
+      <footer className={style.Fotter}>
         {headers.map((header, id) => {
           return <div key={id}>{header}</div>;
         })}
         {contents.map((content, id) => {
           return <div key={id}>{content}</div>;
         })}
-      </div>
+      </footer>
     </>
   );
 };
