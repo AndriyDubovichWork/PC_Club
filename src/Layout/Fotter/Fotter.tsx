@@ -5,6 +5,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { RefContext } from '../../Context/RefContext';
+import { useLocation } from 'react-router-dom';
+import Banner from '../../Shared/Banner/Banner';
 
 const Fotter = () => {
   const { HeaderRef, scrollToElement } = useContext(RefContext);
@@ -77,14 +79,16 @@ const Fotter = () => {
   ];
 
   return (
-    <div className={style.Fotter}>
-      {headers.map((header, id) => {
-        return <div key={id}>{header}</div>;
-      })}
-      {contents.map((content, id) => {
-        return <div key={id}>{content}</div>;
-      })}
-    </div>
+    <>
+      <div className={style.Fotter}>
+        {headers.map((header, id) => {
+          return <div key={id}>{header}</div>;
+        })}
+        {contents.map((content, id) => {
+          return <div key={id}>{content}</div>;
+        })}
+      </div>
+    </>
   );
 };
 

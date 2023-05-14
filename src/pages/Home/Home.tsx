@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import style from './Home.module.scss';
 import Greeting from '../../Shared/Greeting/Greeting';
 import Plan from '../../Shared/Plan/Plan';
-import Banner from './Components/Banner/Banner';
+import Banner from '../../Shared/Banner/Banner';
 import Choose from './Components/Choose/Choose';
 
 import FAQ from './Components/FAQ/FAQ';

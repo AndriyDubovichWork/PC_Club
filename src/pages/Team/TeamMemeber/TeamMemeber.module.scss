@@ -1,0 +1,21 @@
+.teamMemeber {
+  width: fit-content;
+  .image {
+    width: 20vw;
+    background-color: #f6f6f6;
+  }
+
+  .text {
+    text-align: center;
+    padding: 5vh 0;
+
+    .fullName {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .position {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+}
