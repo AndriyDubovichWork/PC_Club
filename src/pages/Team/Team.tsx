@@ -5,15 +5,47 @@ import Banner from '../../Shared/Banner/Banner';
 import TeamMemeber from './TeamMemeber/TeamMemeber';
 
 const Team = () => {
+  const team = [
+    {
+      img: require('./assets/memberOne.png'),
+      fullName: 'Luke Miller',
+      position: 'Salesman',
+    },
+    {
+      img: require('./assets/memberTwo.png'),
+      fullName: 'Michael Diaz',
+      position: 'PC Expert',
+    },
+    {
+      img: require('./assets/memberThree.png'),
+      fullName: 'Briana Ross',
+      position: 'Photographer',
+    },
+    {
+      img: require('./assets/memberThree.png'),
+      fullName: 'Briana Ross',
+      position: 'Photographer',
+    },
+    {
+      img: require('./assets/memberTwo.png'),
+      fullName: 'Michael Diaz',
+      position: 'PC Expert',
+    },
+    {
+      img: require('./assets/memberOne.png'),
+      fullName: 'Luke Miller',
+      position: 'Salesman',
+    },
+  ];
   return (
     <>
       <main className={style.Team}>
         <SubHeader title='Team' />
-        <TeamMemeber
-          img={require('./assets/memberOne.png')}
-          fullName='random Name'
-          position='front end'
-        />
+        <div className={style.TeamContainer}>
+          {team.map((member) => (
+            <TeamMemeber {...member} />
+          ))}
+        </div>
       </main>
       <Banner />
     </>
