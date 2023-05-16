@@ -18,23 +18,23 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
     },
     {
       text: 'About',
-      link: '/about',
+      link: '/PC_Club/about',
     },
     {
       text: 'Computers',
-      link: '/computers',
+      link: '/PC_Club/computers',
     },
     {
       text: 'Reviews',
-      link: '/reviews',
+      link: '/PC_Club/reviews',
     },
     {
       text: 'Our Team',
-      link: '/team',
+      link: '/PC_Club/team',
     },
     {
       text: 'Contact',
-      link: '/contact',
+      link: '/PC_Club/contact',
     },
   ];
 
@@ -43,11 +43,7 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
       {isPC &&
         urls.map((url) => {
           return (
-            <NavLink
-              to={'PC_Club/' + url.link}
-              key={url.text}
-              className={style.Link}
-            >
+            <NavLink to={url.link} key={url.text} className={style.Link}>
               {url.text}
             </NavLink>
           );
@@ -63,7 +59,7 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
               return (
                 <ListItem key={url.text}>
                   <NavLink
-                    to={'PC_Club/' + url.link}
+                    to={url.link}
                     className={style.Link}
                     onClick={() => setIsNavBarOpen(false)}
                   >
