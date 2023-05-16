@@ -22,7 +22,7 @@
     top: 0;
   }
   .Content {
-    width: 50%;
+    z-index: 3;
 
     position: absolute;
     top: 40%;
@@ -32,8 +32,6 @@
       font-size: 1.5rem;
     }
     .title {
-      text-align: left;
-
       margin: 1vh 0;
 
       font-size: 3rem;

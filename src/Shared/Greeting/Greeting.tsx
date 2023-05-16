@@ -6,20 +6,24 @@ import Button from '../../Styled/Button/Button';
 import ButtonMUI from '@mui/material/Button';
 import { RefContext } from '../../Context/RefContext';
 import { useLocation } from 'react-router-dom';
+import useIsPCScreen from '../../Hooks/useIsPCScreen';
 
 const Greeting = () => {
   const { BookRef, scrollToElement } = useContext(RefContext);
 
+  const { isPC, textAlign } = useIsPCScreen();
   const location = useLocation();
   return (
     <>
-      {location.pathname === '/' && (
+      {location.pathname === '/' && isPC ? (
         <img
           src={require('./assets/backGround.png')}
           className={style.BackGround}
         />
+      ) : (
+        ''
       )}
-      <div className={style.Greeting}>
+      <div className={style.Greeting} style={{ textAlign }}>
         <div className={style.Content}>
           <h2 className={style.preTitle}>Plan Your day now</h2>
           <div className={style.title}>
@@ -56,7 +60,9 @@ const Greeting = () => {
             <ArrowForwardIosIcon />
           </ButtonMUI>
         </div>
-        <img src={require('./assets/pcImg.png')} className={style.PCImage} />
+        {isPC && (
+          <img src={require('./assets/pcImg.png')} className={style.PCImage} />
+        )}
       </div>
     </>
   );

@@ -67,7 +67,11 @@ const PresonalInformation = ({
                 {Fields.map((elem) => {
                   return (
                     <div>
-                      <Required text={elem.placeHolder} />
+                      {elem.name === 'coupon' ? (
+                        <p>{elem.placeHolder}</p>
+                      ) : (
+                        <Required text={elem.placeHolder} />
+                      )}
 
                       <Field
                         name={elem.name}

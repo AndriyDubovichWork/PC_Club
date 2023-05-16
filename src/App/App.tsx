@@ -12,6 +12,8 @@ import Computers from '../pages/Computers/Computers';
 import Reviews from '../pages/Reviews/Reviews';
 import Team from '../pages/Team/Team';
 import Contact from '../pages/Contact/Contact';
+import useIsPCScreen from '../Hooks/useIsPCScreen';
+import { Box } from '@mui/material';
 
 const router = createBrowserRouter([
   {
@@ -80,13 +82,15 @@ function App() {
     });
   };
 
+  const isPc = useIsPCScreen();
+
   return (
     <RefContext.Provider value={{ HeaderRef, BookRef, scrollToElement }}>
-      <div className={style.App}>
+      <Box className={style.App}>
         <RouterProvider router={router} />
         <Fotter />
         <ScrollTop />
-      </div>
+      </Box>
     </RefContext.Provider>
   );
 }

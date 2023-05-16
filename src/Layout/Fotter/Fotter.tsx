@@ -5,21 +5,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { RefContext } from '../../Context/RefContext';
-import { useLocation } from 'react-router-dom';
-import Banner from '../../Shared/Banner/Banner';
 
 const Fotter = () => {
   const { HeaderRef, scrollToElement } = useContext(RefContext);
 
-  const headers = [
-    <h1>PC CLUB</h1>,
-    <h1>COMPANY</h1>,
-    <h1>WORKING HOURS</h1>,
-    <h1>SUBSCRIPTION</h1>,
-  ];
   const companyies = ['New York', 'Careers', 'Mobile', 'Blog', 'How we work'];
   const contents = [
     <div>
+      <h1>PC CLUB</h1>
       <p className={style.SubTitle}>
         We offers a big range of service for all your needs. We have the perfect
         PC to meet your needs
@@ -34,6 +27,7 @@ const Fotter = () => {
       </div>
     </div>,
     <div>
+      <h1>COMPANY</h1>
       {companyies.map((company) => {
         return (
           <p
@@ -49,11 +43,13 @@ const Fotter = () => {
       })}
     </div>,
     <div>
+      <h1>WORKING HOURS</h1>
       <p className={style.HighLighted}>Mon - Fri: 9:00AM - 9:00PM</p>
       <p className={style.HighLighted}>Sat: 9:00AM - 19:00PM</p>
       <p className={style.HighLighted}>Sun: Closed</p>
     </div>,
     <div>
+      <h1>SUBSCRIPTION</h1>
       <p>Subscribe your Email address for latest news & updates.</p>
       <TextField
         variant='filled'
@@ -81,9 +77,6 @@ const Fotter = () => {
   return (
     <>
       <footer className={style.Fotter}>
-        {headers.map((header, id) => {
-          return <div key={id}>{header}</div>;
-        })}
         {contents.map((content, id) => {
           return <div key={id}>{content}</div>;
         })}
