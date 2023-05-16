@@ -1,15 +1,25 @@
 .FAQ {
   text-align: center;
-  width: 50%;
+  width: 70%;
   margin: 10vh auto;
   padding: 10vh 10vw;
+  .FAQTitle {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+  }
+  .Title {
+    font-size: clamp(1rem, 2vw, 3rem);
+  }
   .SubTitle {
+    font-size: clamp(1rem, 2vw, 3rem);
+
     margin: 2vh 0;
   }
   .Summary {
     font-weight: 500;
+    font-size: clamp(1rem, 2vw, 3rem);
   }
   .Details {
+    font-size: clamp(0.8rem, 2vw, 3rem);
     font-weight: 400;
     padding: 5vh 5vw;
   }

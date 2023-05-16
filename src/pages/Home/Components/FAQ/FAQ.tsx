@@ -38,8 +38,8 @@ const FAQ = () => {
       elevation={3}
       sx={{ backgroundColor: '#f8f8f8' }}
     >
-      <h3>FAQ</h3>
-      <h1>Frequently Asked Questions</h1>
+      <h3 className={style.FAQTitle}>FAQ</h3>
+      <h1 className={style.Title}>Frequently Asked Questions</h1>
       <div className={style.SubTitle}>
         Frequently Asked Questions About the Car Rental Booking Process on Our
         Website: Answers to Common Concerns and Inquiries.
