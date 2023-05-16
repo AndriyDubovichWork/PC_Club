@@ -11,7 +11,7 @@ const PlanElem: React.FC<PlanElemPropsT> = ({ title, subTitle, children }) => {
   return (
     <div className={style.PlanElem}>
       {children}
-      <h1>{title}</h1>
+      <h1 className={style.title}>{title}</h1>
       <h3 className={style.subTitle}>{subTitle}</h3>
     </div>
   );

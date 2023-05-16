@@ -14,20 +14,20 @@ const Plan = () => {
           title='Select CPU'
           subTitle='We offer a big range of CPUs for all your needs. We have the perfect CPU to meet your needs'
         >
-          <SelectAllIcon sx={{ fontSize: '10rem', color: '#ff4d30' }} />
+          <SelectAllIcon sx={{ fontSize: '10vw', color: '#ff4d30' }} />
         </PlanElem>
         <PlanElem
           title='Contact Us'
           subTitle='Our knowledgeable and friendly operators are always ready to help with any questions or concerns'
         >
-          <SupportAgentIcon sx={{ fontSize: '10rem', color: '#ff4d30' }} />
+          <SupportAgentIcon sx={{ fontSize: '10vw', color: '#ff4d30' }} />
         </PlanElem>
 
         <PlanElem
           title='Select GPU'
           subTitle='We offers a big range of GPUs for all your needs. We have the perfect GPU to meet your needs'
         >
-          <SelectAllIcon sx={{ fontSize: '10rem', color: '#ff4d30' }} />
+          <SelectAllIcon sx={{ fontSize: '10vw', color: '#ff4d30' }} />
         </PlanElem>
       </div>
     </div>

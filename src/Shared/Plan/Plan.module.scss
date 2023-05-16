@@ -7,19 +7,21 @@
   margin: 10vh 0;
 
   text-align: center;
-
   .subTitle {
+    font-size: clamp(0.75rem, 0.5vw, 1rem);
     font-weight: 500;
   }
   .Title {
+    font-size: clamp(1.5rem, 2vw, 3rem);
     font-weight: 900;
   }
   .Content {
     margin: 10vh 0;
 
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-row-gap: 5vw;
+    justify-items: center;
   }
 }
