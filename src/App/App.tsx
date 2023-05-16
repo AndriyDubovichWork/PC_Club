@@ -17,7 +17,7 @@ import { Box } from '@mui/material';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'PC_Club/',
     element: (
       <>
         <Header />
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/about',
+    path: 'PC_Club/about',
     element: (
       <>
         <Header />
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/computers',
+    path: 'PC_Club/computers',
     element: (
       <>
         <Header />
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/reviews',
+    path: 'PC_Club/reviews',
     element: (
       <>
         <Header />
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/team',
+    path: 'PC_Club/team',
     element: (
       <>
         <Header />
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/contact',
+    path: 'PC_Club/contact',
     element: (
       <>
         <Header />
@@ -81,8 +81,6 @@ function App() {
       behavior: 'smooth',
     });
   };
-
-  const isPc = useIsPCScreen();
 
   return (
     <RefContext.Provider value={{ HeaderRef, BookRef, scrollToElement }}>
