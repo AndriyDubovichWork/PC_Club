@@ -6,7 +6,7 @@ import { RefContext } from '../../Context/RefContext';
 import { NavLink } from 'react-router-dom';
 import useIsPCScreen from '../../Hooks/useIsPCScreen';
 import { Button } from '@mui/material';
-
+import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => {
   const { HeaderRef } = useContext(RefContext);
   const { isPC } = useIsPCScreen();
@@ -46,7 +46,9 @@ const Header = () => {
           </div>
         </>
       ) : (
-        <Button onClick={() => setIsNavBarOpen(true)}>open</Button>
+        <Button onClick={() => setIsNavBarOpen(true)}>
+          <MenuIcon sx={{ color: '#ff4d30' }} />
+        </Button>
       )}
     </header>
   );
