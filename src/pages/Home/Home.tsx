@@ -7,7 +7,7 @@ import Choose from './Components/Choose/Choose';
 
 import FAQ from './Components/FAQ/FAQ';
 import BookPC from '../../Shared/BookPC/BookPC';
-import Testimonials from '../Reviews/Testimonials/Testimonials';
+import Testimonials from '../../Shared/Testimonials/Testimonials';
 
 const Home = () => {
   return (

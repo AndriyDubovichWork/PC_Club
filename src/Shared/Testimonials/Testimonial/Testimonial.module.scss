@@ -1,6 +1,6 @@
 .Text {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: clamp(0.6rem, 1vw, 2rem);
 }
 .Author {
   margin-top: 5vh;

@@ -11,7 +11,7 @@ type TestimonialPropsT = {
 
 const Testimonial = ({ img, text, name }: TestimonialPropsT) => {
   return (
-    <Paper sx={{ padding: '10vh 2vw', width: '30vw' }}>
+    <Paper sx={{ padding: '10vh 2vw' }}>
       <div>
         <span className={style.Text}>"{text}"</span>
       </div>

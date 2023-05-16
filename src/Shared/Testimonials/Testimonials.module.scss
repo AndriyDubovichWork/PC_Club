@@ -1,5 +1,4 @@
 .Reviews {
-  height: 100vh;
   width: 100%;
   background-color: #f8f8f8;
 
@@ -32,8 +31,13 @@
       margin: 10vh 0;
 
       width: 100%;
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-row-gap: 2vh;
+      grid-column-gap: 2vw;
+
+      grid-auto-rows: 1fr;
 
       justify-content: space-around;
     }

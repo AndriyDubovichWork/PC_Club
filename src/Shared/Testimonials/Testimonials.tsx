@@ -1,6 +1,7 @@
 import React from 'react';
-import style from './Reviews.module.scss';
+import style from './Testimonials.module.scss';
 import Testimonial from './Testimonial/Testimonial';
+
 const Testimonials = () => {
   return (
     <div className={style.Reviews}>
