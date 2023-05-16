@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/PC_Club/static/css/main.88eb44a5.css",
+    "main.js": "/PC_Club/static/js/main.cdb9dc96.js",
+    "static/media/pcImg.png": "/PC_Club/static/media/pcImg.b3aa8dc3aab2d963a0c5.png",
+    "static/media/backGroundPC.jpg": "/PC_Club/static/media/backGroundPC.c831b90eed38eddce407.jpg",
+    "static/media/Ron.jpg": "/PC_Club/static/media/Ron.fd9b1716200244ed8905.jpg",
+    "static/media/memberThree.png": "/PC_Club/static/media/memberThree.1d499e4b69de7b9e10fb.png",
+    "static/media/memberTwo.png": "/PC_Club/static/media/memberTwo.f41d050c1c5b9e59fc22.png",
+    "static/media/memberOne.png": "/PC_Club/static/media/memberOne.4ba4d772bcd6e82365e8.png",
+    "static/media/backGround.png": "/PC_Club/static/media/backGround.3b5f7a2502f0f81d1490.png",
+    "static/media/harry.jpg": "/PC_Club/static/media/harry.ba7974ae51bb5d44fa69.jpg",
+    "index.html": "/PC_Club/index.html",
+    "main.88eb44a5.css.map": "/PC_Club/static/css/main.88eb44a5.css.map",
+    "main.cdb9dc96.js.map": "/PC_Club/static/js/main.cdb9dc96.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88eb44a5.css",
+    "static/js/main.cdb9dc96.js"
+  ]
+}
