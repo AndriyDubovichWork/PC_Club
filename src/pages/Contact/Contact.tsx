@@ -10,12 +10,14 @@ import { TextField } from '@mui/material';
 import Button from '../../Styled/Button/Button';
 import { NavLink, redirect } from 'react-router-dom';
 import PopUpMessage from '../../Styled/PopUpMessage/PopUpMessage';
+import useIsPCScreen from '../../Hooks/useIsPCScreen';
 
 const Contact = () => {
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
+  const { textAlign } = useIsPCScreen();
   return (
     <>
-      <main className={style.Contact}>
+      <main className={style.Contact} style={{ textAlign }}>
         <SubHeader title='Contact' />
         <div className={style.content}>
           <div className={style.column}>
@@ -25,15 +27,24 @@ const Contact = () => {
               research, development as well as a learning specialist. Over 15
               years of experience.
             </h5>
-            <div className={style.highLighted}>
+            <div
+              className={style.highLighted}
+              style={{ justifyContent: textAlign }}
+            >
               <LocalPhoneIcon />
               (123) -456-789
             </div>
-            <div className={style.highLighted}>
+            <div
+              className={style.highLighted}
+              style={{ justifyContent: textAlign }}
+            >
               <EmailIcon />
               randomemail@gmail.com
             </div>
-            <div className={style.highLighted}>
+            <div
+              className={style.highLighted}
+              style={{ justifyContent: textAlign }}
+            >
               <LocationOnIcon />
               Lviv , Ukraine
             </div>

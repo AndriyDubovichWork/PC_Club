@@ -2,25 +2,24 @@
   width: 80%;
   margin: 0 auto;
   .content {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    justify-items: center;
 
     .column {
       margin: 10vh 0;
 
-      width: 50%;
       .header {
-        font-size: 2.7rem;
+        font-size: clamp(0.85rem, 2vw, 3rem);
         font-weight: 700;
       }
       .subHeader {
-        width: 60%;
-
         margin: 2vh 0;
 
         color: #706f7b;
 
-        font-size: 1rem;
+        font-size: clamp(0.3rem, 2vw, 1rem);
         font-weight: 500;
       }
       .highLighted {
@@ -31,7 +30,7 @@
 
         color: #000;
 
-        margin: 1vh 0;
+        margin: 2vh 0;
       }
       .highLighted:hover {
         color: #ff4d30;
