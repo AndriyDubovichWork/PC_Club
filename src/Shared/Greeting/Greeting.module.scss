@@ -29,12 +29,12 @@
     transform: translateY(-50%);
 
     .preTitle {
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 1vw, 2rem);
     }
     .title {
       margin: 1vh 0;
 
-      font-size: 3rem;
+      font-size: clamp(1.5rem, 2vw, 3rem);
       font-weight: 700;
       .HighLighted {
         color: #ff4d30;
@@ -42,6 +42,7 @@
     }
     .subtitle {
       margin: 1vh 0;
+      font-size: clamp(0.75rem, 0.5vw, 1rem);
     }
     .BookButton {
       margin: 0 0.5vw;

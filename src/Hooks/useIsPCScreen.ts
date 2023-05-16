@@ -18,8 +18,8 @@ const useIsPCScreen = () => {
   }, [window.screen.width]);
 
   let res: resT = {
-    isPC: windowWidth > 720 ? true : false,
-    textAlign: windowWidth > 720 ? 'start' : 'center',
+    isPC: windowWidth > 1000 ? true : false,
+    textAlign: windowWidth > 1000 ? 'start' : 'center',
   };
   return res;
 };

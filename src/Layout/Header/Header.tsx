@@ -9,7 +9,7 @@ import useIsPCScreen from '../../Hooks/useIsPCScreen';
 
 const Header = () => {
   const { HeaderRef } = useContext(RefContext);
-  const isPc = useIsPCScreen();
+  const { isPC } = useIsPCScreen();
   return (
     <header className={style.Header} ref={HeaderRef}>
       <NavLink to='/' className={style.Logo}>
@@ -23,7 +23,7 @@ const Header = () => {
           <h2>CLUB</h2>
         </div>
       </NavLink>
-      {isPc ? (
+      {isPC ? (
         <>
           <NavBar />
           <div className={style.LoginRegister}>

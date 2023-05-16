@@ -13,6 +13,8 @@ const Greeting = () => {
 
   const { isPC, textAlign } = useIsPCScreen();
   const location = useLocation();
+
+  const contentWidth = isPC ? '50%' : '100%';
   return (
     <>
       {location.pathname === '/' && isPC ? (
@@ -24,7 +26,7 @@ const Greeting = () => {
         ''
       )}
       <div className={style.Greeting} style={{ textAlign }}>
-        <div className={style.Content}>
+        <div className={style.Content} style={{ width: contentWidth }}>
           <h2 className={style.preTitle}>Plan Your day now</h2>
           <div className={style.title}>
             Save <span className={style.HighLighted}>big</span> with our PC
