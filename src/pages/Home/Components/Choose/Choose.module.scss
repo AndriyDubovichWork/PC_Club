@@ -1,14 +1,15 @@
 .Choose {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   width: 80%;
   margin: 20vh auto;
 
   .Left,
   .Right {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .WhyUs {
     font-weight: 1500;
