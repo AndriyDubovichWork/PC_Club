@@ -3,8 +3,10 @@
   margin: 0 auto;
   .TeamContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    justify-items: center;
+
     grid-column-gap: 0px;
     grid-row-gap: 10vh;
   }

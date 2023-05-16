@@ -3,15 +3,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.Link {
+  margin: 0 1vw;
+  text-transform: uppercase;
+  text-decoration: none;
 
-  .Link {
-    margin: 0 1vw;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    color: #000;
-  }
-  .Link:hover {
-    color: #ff4d30;
-  }
+  color: #000;
+}
+.Link:hover {
+  color: #ff4d30;
+}
+.comtemt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
