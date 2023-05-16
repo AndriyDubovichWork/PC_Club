@@ -14,7 +14,7 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
   const urls = [
     {
       text: 'Home',
-      link: '/',
+      link: '/PC_Club',
     },
     {
       text: 'About',
