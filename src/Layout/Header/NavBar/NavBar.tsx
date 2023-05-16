@@ -43,7 +43,11 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
       {isPC &&
         urls.map((url) => {
           return (
-            <NavLink to={url.link} key={url.text} className={style.Link}>
+            <NavLink
+              to={'PC_Club/' + url.link}
+              key={url.text}
+              className={style.Link}
+            >
               {url.text}
             </NavLink>
           );
@@ -59,7 +63,7 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
               return (
                 <ListItem key={url.text}>
                   <NavLink
-                    to={url.link}
+                    to={'PC_Club/' + url.link}
                     className={style.Link}
                     onClick={() => setIsNavBarOpen(false)}
                   >

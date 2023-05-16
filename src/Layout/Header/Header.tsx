@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className={style.Header} ref={HeaderRef}>
-      <NavLink to='/' className={style.Logo}>
+      <NavLink to='/PC_Club' className={style.Logo}>
         <img
           src={require('./assets/PCIcon.png')}
           alt='logo'
