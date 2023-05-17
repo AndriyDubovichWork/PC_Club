@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import useIsPCScreen from '../../../Hooks/useIsPCScreen';
 import { Dialog, ListItem } from '@mui/material';
 import { IsAuthorisedContext } from '../../../Context/IsAuthorisedContext';
+import ButtonMUI from '@mui/material/Button';
 
 type NavBarPropsT = {
   isNavBarOpen: boolean;
@@ -38,7 +39,7 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
       link: '/PC_Club/contact',
     },
   ];
-  const { isAuthorised } = useContext(IsAuthorisedContext);
+  const { isAuthorised, setIsAuthorised } = useContext(IsAuthorisedContext);
   const PhoneUrls = isAuthorised
     ? urls
     : [
@@ -82,6 +83,26 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
                 </ListItem>
               );
             })}
+            {isAuthorised && (
+              <ListItem>
+                <ButtonMUI
+                  variant='text'
+                  sx={{
+                    marginRight: '2vw',
+                    color: '#000',
+                    '&:hover': {
+                      color: '#ff4d30',
+                    },
+                  }}
+                  onClick={() => {
+                    setIsNavBarOpen(false);
+                    setIsAuthorised(false);
+                  }}
+                >
+                  Log out
+                </ButtonMUI>
+              </ListItem>
+            )}
           </div>
         </Dialog>
       )}

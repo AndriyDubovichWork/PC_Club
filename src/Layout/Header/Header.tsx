@@ -13,7 +13,7 @@ const Header = () => {
   const { isPC } = useIsPCScreen();
 
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-  const { isAuthorised } = useContext(IsAuthorisedContext);
+  const { isAuthorised, setIsAuthorised } = useContext(IsAuthorisedContext);
 
   return (
     <header className={style.Header} ref={HeaderRef}>
