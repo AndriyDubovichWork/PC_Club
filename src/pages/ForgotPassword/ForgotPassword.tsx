@@ -13,13 +13,11 @@ const ForgotPassword = () => {
   const initialValues = {
     email: '',
   };
-  const { setIsAuthorised } = useContext(IsAuthorisedContext);
   return (
     <div className={style.login}>
       <Formik
         initialValues={initialValues}
         onSubmit={() => {
-          setIsAuthorised(true);
           navigate('/PC_Club');
         }}
         validationSchema={LoginSchema}
