@@ -47,9 +47,7 @@ const PresonalInformation = ({
     <div className={style.PresonalInformation}>
       <h1 className={style.Title}>PERSONAL INFORMATION</h1>
       <Formik
-        onSubmit={(data) => {
-          console.log(data);
-        }}
+        onSubmit={(data) => {}}
         initialValues={{
           firstName: '',
           lastName: '',
