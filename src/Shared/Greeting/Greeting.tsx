@@ -15,7 +15,6 @@ const Greeting = () => {
   const location = useLocation();
 
   const contentWidth = isPC ? '50%' : '100%';
-  console.log(isPC && location.pathname === '/PC_Club');
 
   return (
     <>
