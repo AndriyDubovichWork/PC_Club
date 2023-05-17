@@ -32,18 +32,20 @@ const Header = () => {
       {isPC ? (
         <>
           <div className={style.LoginRegister}>
-            <ButtonMUI
-              variant='text'
-              sx={{
-                marginRight: '2vw',
-                color: '#000',
-                '&:hover': {
-                  color: '#ff4d30',
-                },
-              }}
-            >
-              Sing In
-            </ButtonMUI>
+            <NavLink to='/PC_Club/login'>
+              <ButtonMUI
+                variant='text'
+                sx={{
+                  marginRight: '2vw',
+                  color: '#000',
+                  '&:hover': {
+                    color: '#ff4d30',
+                  },
+                }}
+              >
+                Log In
+              </ButtonMUI>
+            </NavLink>
             <Button>Register</Button>
           </div>
         </>

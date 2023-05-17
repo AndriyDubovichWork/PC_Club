@@ -14,6 +14,8 @@ import Team from '../pages/Team/Team';
 import Contact from '../pages/Contact/Contact';
 import useIsPCScreen from '../Hooks/useIsPCScreen';
 import { Box } from '@mui/material';
+import Login from '../pages/Login/Login';
+import Register from '../pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +69,24 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Contact />
+      </>
+    ),
+  },
+  {
+    path: 'PC_Club/login',
+    element: (
+      <>
+        <Header />
+        <Login />
+      </>
+    ),
+  },
+  {
+    path: 'PC_Club/register',
+    element: (
+      <>
+        <Header />
+        <Register />
       </>
     ),
   },
