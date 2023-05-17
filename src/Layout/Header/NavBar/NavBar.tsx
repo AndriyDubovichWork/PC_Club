@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './NavBar.module.scss';
 import { NavLink } from 'react-router-dom';
 import useIsPCScreen from '../../../Hooks/useIsPCScreen';
-import { Dialog, Drawer, ListItem, ListItemButton, Paper } from '@mui/material';
+import { Dialog, ListItem } from '@mui/material';
+import { IsAuthorisedContext } from '../../../Context/IsAuthorisedContext';
 
 type NavBarPropsT = {
   isNavBarOpen: boolean;
@@ -37,17 +38,20 @@ const NavBar = ({ isNavBarOpen, setIsNavBarOpen }: NavBarPropsT) => {
       link: '/PC_Club/contact',
     },
   ];
-  const PhoneUrls = [
-    ...urls,
-    {
-      text: 'Log In',
-      link: '/PC_Club/login',
-    },
-    {
-      text: 'Register',
-      link: '/PC_Club/register',
-    },
-  ];
+  const { isAuthorised } = useContext(IsAuthorisedContext);
+  const PhoneUrls = isAuthorised
+    ? urls
+    : [
+        ...urls,
+        {
+          text: 'Log In',
+          link: '/PC_Club/login',
+        },
+        {
+          text: 'Register',
+          link: '/PC_Club/register',
+        },
+      ];
   return (
     <nav className={style.NavBar}>
       {isPC &&
