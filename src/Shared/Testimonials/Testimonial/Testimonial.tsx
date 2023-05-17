@@ -16,7 +16,7 @@ const Testimonial = ({ img, text, name }: TestimonialPropsT) => {
         <span className={style.Text}>"{text}"</span>
       </div>
       <div className={style.Author}>
-        <img src={img} alt='testimonial' className={style.Img} />
+        <img loading='lazy' src={img} alt='testimonial' className={style.Img} />
         <h3>{name}</h3>
         <FormatQuoteIcon sx={{ fontSize: '5rem', color: '#ff4d30' }} />
       </div>

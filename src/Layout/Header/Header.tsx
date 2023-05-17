@@ -17,6 +17,7 @@ const Header = () => {
     <header className={style.Header} ref={HeaderRef}>
       <NavLink to='/PC_Club' className={style.Logo}>
         <img
+          loading='lazy'
           src={require('./assets/PCIcon.png')}
           alt='logo'
           className={style.Img}

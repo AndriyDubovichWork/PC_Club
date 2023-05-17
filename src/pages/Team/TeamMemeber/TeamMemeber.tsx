@@ -11,7 +11,7 @@ type TeamMemeberPropsT = {
 const TeamMemeber = ({ img, fullName, position }: TeamMemeberPropsT) => {
   return (
     <Paper className={style.teamMemeber}>
-      <img src={img} className={style.image} />
+      <img loading='lazy' src={img} className={style.image} />
       <div className={style.text}>
         <h1 className={style.fullName}>{fullName}</h1>
         <h3 className={style.position}>{position}</h3>

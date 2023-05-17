@@ -15,10 +15,13 @@ const Greeting = () => {
   const location = useLocation();
 
   const contentWidth = isPC ? '50%' : '100%';
+  console.log(isPC && location.pathname === '/PC_Club');
+
   return (
     <>
-      {location.pathname === '/' && isPC ? (
+      {isPC && location.pathname === '/PC_Club' ? (
         <img
+          loading='lazy'
           src={require('./assets/backGround.png')}
           className={style.BackGround}
         />
@@ -63,7 +66,11 @@ const Greeting = () => {
           </ButtonMUI>
         </div>
         {isPC && (
-          <img src={require('./assets/pcImg.png')} className={style.PCImage} />
+          <img
+            loading='lazy'
+            src={require('./assets/pcImg.png')}
+            className={style.PCImage}
+          />
         )}
       </div>
     </>

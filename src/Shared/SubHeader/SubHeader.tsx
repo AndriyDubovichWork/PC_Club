@@ -12,7 +12,7 @@ const SubHeader = ({ title }: SubHeaderPropsT) => {
 
   return (
     <>
-      <img className={style.backGroundPC} />
+      <img className={style.backGroundPC} loading='lazy' />
 
       <div className={style.Text}>
         <h1 className={style.Title}>{title}</h1>
