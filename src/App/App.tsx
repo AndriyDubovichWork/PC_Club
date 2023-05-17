@@ -1,21 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import style from './App.module.scss';
 import Home from '../pages/Home/Home';
 import Header from '../Layout/Header/Header';
 import Fotter from '../Layout/Fotter/Fotter';
 import ScrollTop from '../Layout/ScrollTop/ScrollTop';
 import { RefContext } from '../Context/RefContext';
-import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom';
+import { IsAuthorisedContext } from '../Context/IsAuthorisedContext';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from '../pages/About/About';
-import dayjs from 'dayjs';
 import Computers from '../pages/Computers/Computers';
 import Reviews from '../pages/Reviews/Reviews';
 import Team from '../pages/Team/Team';
 import Contact from '../pages/Contact/Contact';
-import useIsPCScreen from '../Hooks/useIsPCScreen';
 import { Box } from '@mui/material';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
+import ForgotPassword from '../pages/ForgotPassword/ForgotPassword';
 
 const router = createBrowserRouter([
   {
@@ -90,26 +90,36 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  {
+    path: 'PC_Club/forgotPassword',
+    element: (
+      <>
+        <Header />
+        <ForgotPassword />
+      </>
+    ),
+  },
 ]);
 
 function App() {
   const HeaderRef = useRef(null);
   const BookRef = useRef(null);
-
   const scrollToElement = (ref: any) => {
     ref.current.scrollIntoView({
       behavior: 'smooth',
     });
   };
-
+  const [isAuthorised, setIsAuthorised] = useState(false);
   return (
-    <RefContext.Provider value={{ HeaderRef, BookRef, scrollToElement }}>
-      <Box className={style.App}>
-        <RouterProvider router={router} />
-        <Fotter />
-        <ScrollTop />
-      </Box>
-    </RefContext.Provider>
+    <IsAuthorisedContext.Provider value={{ isAuthorised, setIsAuthorised }}>
+      <RefContext.Provider value={{ HeaderRef, BookRef, scrollToElement }}>
+        <Box className={style.App}>
+          <RouterProvider router={router} />
+          <Fotter />
+          <ScrollTop />
+        </Box>
+      </RefContext.Provider>
+    </IsAuthorisedContext.Provider>
   );
 }
 

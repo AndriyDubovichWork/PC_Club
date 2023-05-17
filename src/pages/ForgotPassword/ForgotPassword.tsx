@@ -1,22 +1,19 @@
 import React, { useContext } from 'react';
-import style from './Login.module.scss';
+import style from './ForgotPassword.module.scss';
 import { Field, Form, Formik } from 'formik';
-import LoginSchema from './Validation/LoginSchema';
+import LoginSchema from './Validation/ForgotPasswordSchema';
 import { TextField } from 'formik-mui';
 import Button from '../../Styled/Button/Button';
-import { Checkbox, FormControlLabel } from '@mui/material';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { IsAuthorisedContext } from '../../Context/IsAuthorisedContext';
 
-const Login = () => {
+const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const initialValues = {
     email: '',
-    password: '',
   };
   const { setIsAuthorised } = useContext(IsAuthorisedContext);
-
   return (
     <div className={style.login}>
       <Formik
@@ -32,23 +29,14 @@ const Login = () => {
             name='email'
             component={TextField}
             placeholder='Email'
-            className={style.email}
+            className={style.field}
           />
-          <Field
-            name='password'
-            component={TextField}
-            placeholder='Password'
-            className={style.password}
-          />
-          <FormControlLabel control={<Checkbox />} label='remember me' />
-          <NavLink to='/PC_Club/forgotPassword' className={style.Link}>
-            Forgot Password?
-          </NavLink>
-          <Button type='submit'>Log In</Button>
+
+          <Button type='submit'>Request Reset Link</Button>
         </Form>
       </Formik>
     </div>
   );
 };
 
-export default Login;
+export default ForgotPassword;
