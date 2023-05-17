@@ -34,7 +34,7 @@ const Login = () => {
           <Field
             name='password'
             component={TextField}
-            placeholder='Passord'
+            placeholder='Password'
             className={style.password}
           />
           <FormControlLabel control={<Checkbox />} label='remember me' />

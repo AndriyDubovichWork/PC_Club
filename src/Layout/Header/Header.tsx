@@ -46,7 +46,9 @@ const Header = () => {
                 Log In
               </ButtonMUI>
             </NavLink>
-            <Button>Register</Button>
+            <NavLink to='/PC_Club/register'>
+              <Button>Register</Button>
+            </NavLink>
           </div>
         </>
       ) : (
