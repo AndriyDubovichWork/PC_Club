@@ -5,7 +5,7 @@ import LoginSchema from './Validation/LoginSchema';
 import { TextField } from 'formik-mui';
 import Button from '../../Styled/Button/Button';
 import { Checkbox, FormControlLabel } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,8 +37,10 @@ const Login = () => {
             placeholder='Passord'
             className={style.password}
           />
-
           <FormControlLabel control={<Checkbox />} label='remember me' />
+          <NavLink to='/PC_Club/forgotPassword' className={style.Link}>
+            Forgot Password?
+          </NavLink>
           <Button type='submit'>Log In</Button>
         </Form>
       </Formik>
