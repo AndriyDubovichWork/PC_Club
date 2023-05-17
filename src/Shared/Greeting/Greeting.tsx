@@ -19,7 +19,9 @@ const Greeting = () => {
 
   return (
     <>
-      {isPC && location.pathname === '/PC_Club' ? (
+      {isPC &&
+      (location.pathname === '/PC_Club' ||
+        location.pathname === '/PC_Club/') ? (
         <img
           loading='lazy'
           src={require('./assets/backGround.png')}
