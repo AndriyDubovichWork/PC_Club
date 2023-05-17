@@ -34,7 +34,7 @@ const Header = () => {
       {isPC ? (
         <>
           <div className={style.LoginRegister}>
-            {!isAuthorised && (
+            {!isAuthorised ? (
               <>
                 <NavLink to='/PC_Club/login'>
                   <ButtonMUI
@@ -54,6 +54,20 @@ const Header = () => {
                   <Button>Register</Button>
                 </NavLink>
               </>
+            ) : (
+              <ButtonMUI
+                variant='text'
+                sx={{
+                  marginRight: '2vw',
+                  color: '#000',
+                  '&:hover': {
+                    color: '#ff4d30',
+                  },
+                }}
+                onClick={() => setIsAuthorised(false)}
+              >
+                Log Out
+              </ButtonMUI>
             )}
           </div>
         </>
