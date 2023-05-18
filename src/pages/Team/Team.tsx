@@ -21,21 +21,6 @@ const Team = () => {
       fullName: 'Briana Ross',
       position: 'Photographer',
     },
-    {
-      img: require('./assets/memberThree.png'),
-      fullName: 'Briana Ross',
-      position: 'Photographer',
-    },
-    {
-      img: require('./assets/memberTwo.png'),
-      fullName: 'Michael Diaz',
-      position: 'PC Expert',
-    },
-    {
-      img: require('./assets/memberOne.png'),
-      fullName: 'Luke Miller',
-      position: 'Salesman',
-    },
   ];
   return (
     <>
@@ -43,7 +28,7 @@ const Team = () => {
         <SubHeader title='Team' />
         <div className={style.TeamContainer}>
           {team.map((member) => (
-            <TeamMemeber {...member} />
+            <TeamMemeber {...member} key={member.fullName} />
           ))}
         </div>
       </main>

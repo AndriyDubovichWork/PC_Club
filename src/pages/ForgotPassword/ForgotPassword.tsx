@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     email: '',
   };
   return (
-    <div className={style.login}>
+    <main className={style.login}>
       <Formik
         initialValues={initialValues}
         onSubmit={() => {
@@ -33,7 +33,7 @@ const ForgotPassword = () => {
           <Button type='submit'>Request Reset Link</Button>
         </Form>
       </Formik>
-    </div>
+    </main>
   );
 };
 

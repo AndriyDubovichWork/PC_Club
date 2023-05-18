@@ -18,7 +18,7 @@ const Login = () => {
   const { setIsAuthorised } = useContext(IsAuthorisedContext);
 
   return (
-    <div className={style.login}>
+    <main className={style.login}>
       <Formik
         initialValues={initialValues}
         onSubmit={() => {
@@ -47,7 +47,7 @@ const Login = () => {
           <Button type='submit'>Log In</Button>
         </Form>
       </Formik>
-    </div>
+    </main>
   );
 };
 

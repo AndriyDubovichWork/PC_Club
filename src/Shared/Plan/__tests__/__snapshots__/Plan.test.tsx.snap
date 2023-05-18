@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plan match snapshot 1`] = `
+<div
+  className="Plan"
+>
+  <h2
+    className="subTitle"
+  >
+    Plan your day now
+  </h2>
+  <h1
+    className="Title"
+  >
+    Quick & easy with Our PC Club
+  </h1>
+  <div
+    className="Content"
+  >
+    <div
+      className="PlanElem"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1abyorm-MuiSvgIcon-root"
+        data-testid="SelectAllIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"
+        />
+      </svg>
+      <h1
+        className="title"
+      >
+        Select CPU
+      </h1>
+      <h3
+        className="subTitle"
+      >
+        We offer a big range of CPUs for all your needs. We have the perfect CPU to meet your needs
+      </h3>
+    </div>
+    <div
+      className="PlanElem"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1abyorm-MuiSvgIcon-root"
+        data-testid="SupportAgentIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62z"
+        />
+        <circle
+          cx="9"
+          cy="13"
+          r="1"
+        />
+        <circle
+          cx="15"
+          cy="13"
+          r="1"
+        />
+        <path
+          d="M18 11.03C17.52 8.18 15.04 6 12.05 6c-3.03 0-6.29 2.51-6.03 6.45 2.47-1.01 4.33-3.21 4.86-5.89 1.31 2.63 4 4.44 7.12 4.47z"
+        />
+      </svg>
+      <h1
+        className="title"
+      >
+        Contact Us
+      </h1>
+      <h3
+        className="subTitle"
+      >
+        Our knowledgeable and friendly operators are always ready to help with any questions or concerns
+      </h3>
+    </div>
+    <div
+      className="PlanElem"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1abyorm-MuiSvgIcon-root"
+        data-testid="SelectAllIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"
+        />
+      </svg>
+      <h1
+        className="title"
+      >
+        Select GPU
+      </h1>
+      <h3
+        className="subTitle"
+      >
+        We offers a big range of GPUs for all your needs. We have the perfect GPU to meet your needs
+      </h3>
+    </div>
+  </div>
+</div>
+`;

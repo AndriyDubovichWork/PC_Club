@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubHeader match snapshot 1`] = `
+Array [
+  <img
+    className="backGroundPC"
+    loading="lazy"
+  />,
+  <div
+    className="Text"
+  >
+    <h1
+      className="Title"
+    >
+      hello
+    </h1>
+    <nav
+      aria-label="breadcrumb"
+      className="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root"
+    >
+      <ol
+        className="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+      >
+        <li
+          className="MuiBreadcrumbs-li"
+        >
+          <a
+            aria-current="page"
+            className="Link active"
+            href="/PC_Club"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          aria-hidden={true}
+          className="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          className="MuiBreadcrumbs-li"
+        >
+          <a
+            aria-current="page"
+            className="Link active"
+            href="/PC_Club/about"
+            onClick={[Function]}
+          >
+            hello
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </div>,
+]
+`;

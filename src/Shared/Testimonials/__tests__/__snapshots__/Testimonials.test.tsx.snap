@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials match snapshot 1`] = `
+<div
+  className="Reviews"
+>
+  <div
+    className="Content"
+  >
+    <h3
+      className="preTitle"
+    >
+      Reviewed by People
+    </h3>
+    <h1
+      className="Title"
+    >
+      Client's Testimonials
+    </h1>
+    <h4
+      className="subTitle"
+    >
+      Discover the positive impact we've made on the our clients by reading through their testimonials. Our clients have experienced our service and results, and they're eager to share their positive experiences with you.
+    </h4>
+    <div
+      className="Testimonials"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-er2eq5-MuiPaper-root"
+      >
+        <div>
+          <span
+            className="Text"
+          >
+            "
+            I had a great experience at PC Club! The staff was friendly and helpful. I highly recommend this store.
+            "
+          </span>
+        </div>
+        <div
+          className="Author"
+        >
+          <img
+            alt="testimonial"
+            className="Img"
+            loading="lazy"
+            src="harry.jpg"
+          />
+          <h3>
+            Harry Potter
+          </h3>
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-19pa9qe-MuiSvgIcon-root"
+            data-testid="FormatQuoteIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-er2eq5-MuiPaper-root"
+      >
+        <div>
+          <span
+            className="Text"
+          >
+            "
+            PC Club's great selection and knowledgeable staff make them my go-to for tech needs.
+            "
+          </span>
+        </div>
+        <div
+          className="Author"
+        >
+          <img
+            alt="testimonial"
+            className="Img"
+            loading="lazy"
+            src="Ron.jpg"
+          />
+          <h3>
+            Ron Weasley
+          </h3>
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-19pa9qe-MuiSvgIcon-root"
+            data-testid="FormatQuoteIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

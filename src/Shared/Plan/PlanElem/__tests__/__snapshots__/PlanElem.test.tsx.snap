@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlanElem match snapshot 1`] = `
+<div
+  className="PlanElem"
+>
+  <div />
+  <h1
+    className="title"
+  >
+    Contact Us
+  </h1>
+  <h3
+    className="subTitle"
+  >
+    Our knowledgeable and friendly operators are always ready to help with any questions or concerns
+  </h3>
+</div>
+`;

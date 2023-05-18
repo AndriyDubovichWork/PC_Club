@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner match snapshot 1`] = `
+<div
+  className="Banner"
+>
+  <h1
+    className="Title"
+  >
+    Save big with our cheap PC Club
+  </h1>
+  <h3
+    className="subTitle"
+  >
+    Top PCs. Global Suppliers.
+    <span
+      className="HighLighted"
+    >
+       24/7
+    </span>
+     Support.
+  </h3>
+</div>
+`;

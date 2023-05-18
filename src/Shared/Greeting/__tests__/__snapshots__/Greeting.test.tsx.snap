@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Greeting match snapshot 1`] = `
+<div
+  className="Greeting"
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    className="Content"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <h2
+      className="preTitle"
+    >
+      Plan Your day now
+    </h2>
+    <div
+      className="title"
+    >
+      Save 
+      <span
+        className="HighLighted"
+      >
+        big
+      </span>
+       with our PC Clubs
+    </div>
+    <p
+      className="subtitle"
+    >
+      Best and cheapest PC Clubs in country
+    </p>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-127p27p-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Book PC
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vhvjub-MuiSvgIcon-root"
+        data-testid="CheckCircleIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+        />
+      </svg>
+    </button>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MoreButton css-1kif34l-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Learn More
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="ArrowForwardIosIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

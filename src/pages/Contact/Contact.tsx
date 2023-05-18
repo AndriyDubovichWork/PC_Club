@@ -8,7 +8,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Required from '../../Styled/Required/Required';
 import { TextField } from '@mui/material';
 import Button from '../../Styled/Button/Button';
-import { NavLink, redirect } from 'react-router-dom';
 import PopUpMessage from '../../Styled/PopUpMessage/PopUpMessage';
 import useIsPCScreen from '../../Hooks/useIsPCScreen';
 

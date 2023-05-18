@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team match snapshot 1`] = `
+Array [
+  <main
+    className="Team"
+  >
+    <img
+      className="backGroundPC"
+      loading="lazy"
+    />
+    <div
+      className="Text"
+    >
+      <h1
+        className="Title"
+      >
+        Team
+      </h1>
+      <nav
+        aria-label="breadcrumb"
+        className="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root"
+      >
+        <ol
+          className="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+        >
+          <li
+            className="MuiBreadcrumbs-li"
+          >
+            <a
+              aria-current="page"
+              className="Link active"
+              href="/PC_Club"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </li>
+          <li
+            aria-hidden={true}
+            className="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+          >
+            /
+          </li>
+          <li
+            className="MuiBreadcrumbs-li"
+          >
+            <a
+              aria-current="page"
+              className="Link active"
+              href="/PC_Club/team"
+              onClick={[Function]}
+            >
+              Team
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div
+      className="TeamContainer"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 teamMemeber css-1ps6pg7-MuiPaper-root"
+      >
+        <img
+          className="image"
+          loading="lazy"
+          src="memberOne.png"
+        />
+        <div
+          className="text"
+        >
+          <h1
+            className="fullName"
+          >
+            Luke Miller
+          </h1>
+          <h3
+            className="position"
+          >
+            Salesman
+          </h3>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 teamMemeber css-1ps6pg7-MuiPaper-root"
+      >
+        <img
+          className="image"
+          loading="lazy"
+          src="memberTwo.png"
+        />
+        <div
+          className="text"
+        >
+          <h1
+            className="fullName"
+          >
+            Michael Diaz
+          </h1>
+          <h3
+            className="position"
+          >
+            PC Expert
+          </h3>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 teamMemeber css-1ps6pg7-MuiPaper-root"
+      >
+        <img
+          className="image"
+          loading="lazy"
+          src="memberThree.png"
+        />
+        <div
+          className="text"
+        >
+          <h1
+            className="fullName"
+          >
+            Briana Ross
+          </h1>
+          <h3
+            className="position"
+          >
+            Photographer
+          </h3>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <div
+    className="Banner"
+  >
+    <h1
+      className="Title"
+    >
+      Save big with our cheap PC Club
+    </h1>
+    <h3
+      className="subTitle"
+    >
+      Top PCs. Global Suppliers.
+      <span
+        className="HighLighted"
+      >
+         24/7
+      </span>
+       Support.
+    </h3>
+  </div>,
+]
+`;
