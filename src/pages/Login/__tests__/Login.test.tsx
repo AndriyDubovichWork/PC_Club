@@ -1,4 +1,10 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import {
+  render,
+  screen,
+  cleanup,
+  waitFor,
+  fireEvent,
+} from '@testing-library/react';
 import Login from '../Login';
 import renderer from 'react-test-renderer';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
@@ -32,4 +38,27 @@ test('Login contains fields', () => {
 
   expect(screen.getByPlaceholderText('Email')).toBeInTheDocument();
   expect(screen.getByPlaceholderText('Password')).toBeInTheDocument();
+});
+test('Login input cnahges', () => {
+  render(
+    <MemoryRouter initialEntries={['/PC_Club/login']}>
+      <Routes>
+        <Route path='/PC_Club/login' element={<Login />} />
+      </Routes>
+    </MemoryRouter>
+  );
+
+  const email: HTMLInputElement = screen.getByPlaceholderText('Email');
+  const password: HTMLInputElement = screen.getByPlaceholderText('Password');
+
+  expect(email).toBeInTheDocument();
+  expect(password).toBeInTheDocument();
+
+  waitFor(() => {
+    fireEvent.change(email, { target: { value: 'invalid' } });
+    fireEvent.change(password, { target: { value: 'Rtx 4080' } });
+  });
+
+  expect(email.value).toBe('invalid');
+  expect(password.value).toBe('Rtx 4080');
 });

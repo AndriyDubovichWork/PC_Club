@@ -1,6 +1,11 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import {
+  render,
+  screen,
+  cleanup,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react';
 import BookPC from '../BookPC';
-import renderer from 'react-test-renderer';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 afterEach(() => {
@@ -25,4 +30,32 @@ test('BookPC contains tags', () => {
   expect(screen.getByText('Until')).toBeInTheDocument();
 
   expect(screen.getByText('Book')).toBeInTheDocument();
+});
+
+test('input changing', () => {
+  render(
+    <MemoryRouter initialEntries={['/PC_Club/']}>
+      <Routes>
+        <Route path='/PC_Club/' element={<BookPC />} />
+      </Routes>
+    </MemoryRouter>
+  );
+
+  const dateInput: HTMLInputElement = screen.getByPlaceholderText('DD/MM/YYYY');
+  const GPUInput: HTMLInputElement = screen.getByDisplayValue('Rtx 4090');
+  const CPUInput: HTMLInputElement = screen.getByDisplayValue('i9 13th 13900k');
+
+  expect(dateInput).toBeInTheDocument();
+  expect(GPUInput).toBeInTheDocument();
+  expect(CPUInput).toBeInTheDocument();
+
+  waitFor(() => {
+    fireEvent.change(dateInput, { target: { value: '12/11/1099' } });
+    fireEvent.change(GPUInput, { target: { value: 'Rtx 4080' } });
+    fireEvent.change(CPUInput, { target: { value: 'i7 13th 13700k' } });
+  });
+
+  expect(dateInput.value).toBe('12/11/1099');
+  expect(GPUInput.value).toBe('Rtx 4080');
+  expect(CPUInput.value).toBe('i7 13th 13700k');
 });
