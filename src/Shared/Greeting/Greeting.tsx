@@ -48,6 +48,9 @@ const Greeting = () => {
             <CheckCircleIcon sx={{ marginLeft: '1vw' }} />
           </Button>
           <ButtonMUI
+            onClick={() => {
+              scrollToElement(BookRef);
+            }}
             variant='outlined'
             className={style.MoreButton}
             sx={{
